@@ -14,3 +14,46 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('admin', function(){
+
+
+
+    return view('admin.dashboard');
+
+});
+Route::get('parent', function(){
+
+
+
+    return view('admin.data');
+
+});
+Route::get('teacher', function(){
+
+
+
+    return view('admin.data');
+
+});
+Route::get('user', function(){
+
+
+
+    return view('admin.data');
+
+});
+Route::get('student', function(){
+
+
+
+    return view('admin.data');
+
+});
+Route::get('admin2', function(){
+
+
+
+    return view('admin2.index');
+
+});
