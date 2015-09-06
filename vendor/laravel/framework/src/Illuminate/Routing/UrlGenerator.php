@@ -195,7 +195,7 @@ class UrlGenerator implements UrlGeneratorContract
             return $path;
         }
 
-        // Once we get the root URL, we will check to see if it contains an index.php
+        // Once we get the root URL, we will check to see if it contains an index.blade.php
         // file in the paths. If it does, we will remove it since it is not needed
         // for asset paths, but only for routes to endpoints in the application.
         $root = $this->getRootUrl($this->getScheme($secure));
@@ -204,14 +204,14 @@ class UrlGenerator implements UrlGeneratorContract
     }
 
     /**
-     * Remove the index.php file from a path.
+     * Remove the index.blade.php file from a path.
      *
      * @param  string  $root
      * @return string
      */
     protected function removeIndex($root)
     {
-        $i = 'index.php';
+        $i = 'index.blade.php';
 
         return Str::contains($root, $i) ? str_replace('/'.$i, '', $root) : $root;
     }

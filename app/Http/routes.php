@@ -47,7 +47,14 @@ Route::get('student', function(){
 
 
 
-    return view('admin.data');
+    return view('admin.student.index');
+
+});
+Route::get('student/add', function(){
+
+
+
+    return view('admin.student.student-form');
 
 });
 Route::get('admin2', function(){
