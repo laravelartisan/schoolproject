@@ -9,6 +9,7 @@
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{ asset('bower_components/admin-lte/bootstrap/css/bootstrap.min.css') }}">
     {!!  Html::style('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css') !!}
+
     <!-- Font Awesome -->
 {{--    <link rel="stylesheet" href="{{ url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css') }}">--}}
     <!-- Ionicons -->
@@ -80,6 +81,7 @@
     </script>
     <!-- Bootstrap 3.3.5 -->
     {!! Html::script('bower_components/admin-lte/bootstrap/js/bootstrap.min.js') !!}
+
    @yield('datascript')
 
     {{--<script src="bootstrap/js/bootstrap.min.js"></script>--}}
@@ -128,18 +130,6 @@
     {!! Html::script('bower_components/admin-lte/dist/js/demo.js') !!}
     {{--<script src="dist/js/demo.js"></script>--}}
 
-    <script>
-      $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-          "paging": true,
-          "lengthChange": false,
-          "searching": false,
-          "ordering": true,
-          "info": true,
-          "autoWidth": false
-        });
-      });
-    </script>
+
   </body>
 </html>
