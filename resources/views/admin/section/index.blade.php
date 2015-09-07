@@ -33,7 +33,7 @@
      		</div>
 
      		<div class="col-md-12">
-     			<div class="col-md-6 col-md-offset-3">
+     			<div class="col-md-6 col-md-offset-3">     			
      				<div class="class-holder">
      					<form>
      					    <label for="">Class</label>
@@ -44,16 +44,16 @@
 							  <option>Three</option>
 							  <option>Four</option>
 							  <option>Five</option>
-							</select>
-     					 </form>
+							</select>							
+     					 </form>     					
      				</div>
-     			</div>
+     			</div>                 
      		</div>
      	</div>
 		<div id="datatable">
 
 
-			{{--		@include('admin.datatable')--}}
+{{--		@include('admin.datatable')--}}
 		</div>
 
 	</div>

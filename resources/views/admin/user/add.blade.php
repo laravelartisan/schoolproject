@@ -13,14 +13,14 @@
             <div class="col-md-12">
                 <div class="student-box-header">
                     <div class="col-md-6">
-                       <span class="glyphicon glyphicon-user " aria-hidden="true"></span>Student
+                       <span class="glyphicon glyphicon-user " aria-hidden="true"></span>User
                     </div>
                     <div class="col-md-6 snt">
                        <ul class="breadcrumb text-right">
                             <li>
                             <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
                             <a href="#">Dashboard</a></li>
-                            <li class="active">Student</li>
+                            <li class="active">User</li>
                         </ul>
                     </div>
                 </div>
@@ -160,16 +160,22 @@
      	</div>
     </div>
 
+
+
    @endsection
 
 
 @section('datascript')
     <script type="text/javascript">
-        $(function() {
-            $('#datetimepicker').datetimepicker({
 
+        $(document).ready(function(){
+            $(function() {
+                $('#datetimepicker').datetimepicker({
+
+                });
             });
         });
+
     </script>
 
 @endsection

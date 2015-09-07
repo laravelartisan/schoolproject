@@ -2,7 +2,7 @@
 
 @section('head')
 	{!! Html::style('css/styles.css') !!}
-	<link rel="stylesheet" href="{{ asset('bower_components/admin-lte/plugins/datatables/dataTables.bootstrap.css') }}">
+
 @endsection
 
 @section('content')
@@ -61,52 +61,4 @@
 
  @endsection
 
-@section('datascript')
-	<script src="{{ asset('bower_components/admin-lte/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-	{!! Html::script('bower_components/admin-lte/plugins/datatables/dataTables.bootstrap.min.js') !!}
 
-	<script>
-		$(function () {
-			$("#example1").DataTable();
-			$('#example2').DataTable({
-				"paging": true,
-				"lengthChange": false,
-				"searching": false,
-				"ordering": true,
-				"info": true,
-				"autoWidth": false
-			});
-		});
-	</script>
-
-	<script type="text/javascript">
-
-		$(document).ready(function(){
-			$('#classname').change(function()
-			{
-				/* setting currently changed option value to option variable */
-				var option = $(this).find('option:selected').val();
-				/* setting input box value to selected option value */
-
-				/*alert(option);*/
-				var host = window.location.origin ;
-
-
-				$.ajax({
-					url: host + '/teacher',
-					type: "GET", // not POST, laravel won't allow it
-					success: function(data){
-						alert(data);
-						$data = $(data); // the HTML content your controller has produced
-
-						$('#datatable').html($data);
-					}
-				});
-
-			});
-		});
-
-	</script>
-
-
-@endsection

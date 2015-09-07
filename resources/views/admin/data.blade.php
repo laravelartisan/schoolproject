@@ -1,12 +1,14 @@
-@extends('admin.layouts.admin')
+{{--@extends('admin.layouts.admin')--}}
 
+{{--
 @section('head')
 
     <link rel="stylesheet" href="{{ asset('bower_components/admin-lte/plugins/datatables/dataTables.bootstrap.css') }}">
 
 @endsection
+--}}
 
-@section('content')
+{{--@section('content')--}}
     <div class="row">
         <div class="col-sm-12">
             <div class="box">
@@ -62,8 +64,9 @@
             </div><!-- /.box -->
         </div>
     </div>
-@endsection
+{{--@endsection--}}
 
+{{--
 @section('datascript')
     <script src="{{ asset('bower_components/admin-lte/plugins/datatables/jquery.dataTables.min.js') }}"></script>
     {!! Html::script('bower_components/admin-lte/plugins/datatables/dataTables.bootstrap.min.js') !!}
@@ -81,4 +84,4 @@
             });
         });
     </script>
-@endsection
+@endsection--}}
