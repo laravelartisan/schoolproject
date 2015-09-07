@@ -25,7 +25,7 @@
         <ul class="sidebar-menu">
             <li class="header">Dashboard</li>
 
-            <li class="active"><a href="admin"><i class="fa fa-laptop text-red"></i><span>Dashboard</span></a></li>
+            <li class="active"><a href="{{ url('admin') }}"><i class="fa fa-laptop text-red"></i><span>Dashboard</span></a></li>
             <li class="active"><a href="{{ url('student') }}"><i class="fa fa-mortar-board text-red"></i><span>Student</span></a></li>
             <li class="active"><a href="{{ url('parent') }}"><i class="fa fa-user text-red"></i><span>Parents</span></a></li>
             <li class="active"><a href="{{ url('teacher') }}"><i class="fa fa fa-user text-red"></i><span>Teacher</span></a></li>
