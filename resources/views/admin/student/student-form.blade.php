@@ -8,6 +8,7 @@
 
 
 @section('content')
+    <div class="container-fluid" style="min-height: 1215px;">
      	<div class="row">
             <div class="col-md-12">
                 <div class="student-box-header">
@@ -27,7 +28,7 @@
         </div> <!--row-->
 
      	<div class="row margin-top-area">     		    
-     		<div class="col-md-12 snt">     			   			
+     		<div class="col-md-8 snt">     			   			
                 <form class="form-horizontal">                   
                     <div class="form-group">
                         <label for="inputName" class="col-sm-2 control-label">Name</label>
@@ -157,7 +158,7 @@
                 </form>     		               
      		</div>
      	</div>
-
+    </div>
 
    @endsection
 
