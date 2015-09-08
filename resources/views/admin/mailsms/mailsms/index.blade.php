@@ -13,14 +13,14 @@
 			<div class="col-md-12">
 				<div class="student-box-header">
 					<div class="col-md-6">
-						<span class="glyphicon glyphicon-user " aria-hidden="true"></span>Parents
+						<span class="glyphicon glyphicon-user " aria-hidden="true"></span>Mail/Sms
 					</div>
 					<div class="col-md-6 snt">
 						<ul class="breadcrumb text-right">
 							<li>
 								<span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
 								<a href="#">Dashboard</a></li>
-							<li class="active">Parents</li>
+							<li class="active">Mail/Sms</li>
 						</ul>
 					</div>
 				</div>
@@ -30,14 +30,69 @@
 		<div class="row bg-white">
 			<div class="col-md-12">
 				<div class="add-student">
-					<a class="admore" href="{{ url('parent/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Parents</a>
+					<a class="admore" href="{{ url('mailsms/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Mail/Sms</a>
 				</div>
 			</div>
 		</div>
 
 
+{{--
+			@include('admin.datatable')--}}
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="box">
+					<div class="box-header">
+						<h3 class="box-title">Data Table With Full Features</h3>
+					</div><!-- /.box-header -->
+					<div class="box-body">
+						<table id="example1" class="table table-bordered table-striped">
+							<thead>
+							<tr>
+								<th>ID</th>
+								<th>NAME</th>
+								<th>EMAIL</th>
+								<th>TYPE</th>
+								<th>GRADE</th>
+							</tr>
+							</thead>
+							<tbody>
 
-			@include('admin.datatable')
+							@for ($i = 0; $i < 15; $i++)
+								<tr>
+									<td>Trident</td>
+									<td>Internet
+										Explorer 4.0</td>
+									<td>Win 95+</td>
+									<td> 4</td>
+									<td>X</td>
+								</tr>
+							@endfor
+
+
+
+
+							<tr>
+								<td>Other browsers</td>
+								<td>All others</td>
+								<td>-</td>
+								<td>-</td>
+								<td>U</td>
+							</tr>
+							</tbody>
+							<tfoot>
+							<tr>
+								<th>Rendering engine</th>
+								<th>Browser</th>
+								<th>Platform(s)</th>
+								<th>Engine version</th>
+								<th>CSS grade</th>
+							</tr>
+							</tfoot>
+						</table>
+					</div><!-- /.box-body -->
+				</div><!-- /.box -->
+			</div>
+		</div>
 		</div>
 
 	</div>

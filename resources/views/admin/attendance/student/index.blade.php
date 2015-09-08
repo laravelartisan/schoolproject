@@ -11,14 +11,14 @@
      		<div class="col-md-12">
      		  	<div class="student-box-header">
 					<div class="col-md-6">
-                       <span class="glyphicon glyphicon-user " aria-hidden="true"></span>Student
+                       <span class="glyphicon glyphicon-user " aria-hidden="true"></span>Student Attendance
 					</div>
 					<div class="col-md-6 snt">
 					   <ul class="breadcrumb text-right">
 							<li>
 							<span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
 							<a href="#">Dashboard</a></li>
-							<li class="active">Student</li>
+							<li class="active">Student Attendance</li>
 						</ul>
 					</div>
 				</div>
@@ -28,7 +28,7 @@
      	<div class="row bg-white">
      		<div class="col-md-12">
                  <div class="add-student">
-                 	<a class="admore" href="{{ url('student/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add a student</a>
+                 	<a class="admore" href="{{ url('attendance/student/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Student Attendance</a>
                  </div>
      		</div>
 
@@ -93,10 +93,10 @@
 
 
 				$.ajax({
-					url: host + '/teacher',
+					url: host + '/student/table',
 					type: "GET", // not POST, laravel won't allow it
 					success: function(data){
-						alert(data);
+						/*alert(data);*/
 						$data = $(data); // the HTML content your controller has produced
 
 						$('#datatable').html($data);

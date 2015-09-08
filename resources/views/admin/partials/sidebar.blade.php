@@ -81,7 +81,7 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('transport/transport') }}"><i class="fa fa-train"></i> Transport</a></li>
+                    <li><a href="{{ url('transport') }}"><i class="fa fa-train"></i> Transport</a></li>
                     <li><a href="{{ url('transport/member') }}"><i class="fa fa-user"></i> Member</a></li>
                 </ul>
             </li>
@@ -92,7 +92,7 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('hostel/hostel') }}"><i class="fa fa-hotel"></i> Hostel</a></li>
+                    <li><a href="{{ url('hostel') }}"><i class="fa fa-hotel"></i> Hostel</a></li>
                     <li><a href="{{ url('hostel/category') }}"><i class="fa fa-leaf"></i> Category</a></li>
                     <li><a href="{{ url('hostel/member') }}"><i class="fa fa-user"></i> Member</a></li>
                     {{--<li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>--}}
@@ -118,7 +118,7 @@
             </li>
             <li><a href="{{ url('promotion') }}"><i class="fa fa-level-up text-red"></i> <span>Promotion</span></a></li>
 
-            <li><a href="#"><i class="fa fa-film text-red"></i> <span>Media</span></a></li>
+            <li><a href="{{ url('media') }}"><i class="fa fa-film text-red"></i> <span>Media</span></a></li>
 
             <li class="treeview">
                 <a href="#">

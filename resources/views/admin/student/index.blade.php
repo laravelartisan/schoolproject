@@ -53,7 +53,7 @@
 		<div id="datatable">
 
 
-			{{--		@include('admin.datatable')--}}
+
 		</div>
 
 	</div>
@@ -93,10 +93,10 @@
 
 
 				$.ajax({
-					url: host + '/teacher',
+					url: host + '/student/table',
 					type: "GET", // not POST, laravel won't allow it
 					success: function(data){
-						alert(data);
+						/*alert(data);*/
 						$data = $(data); // the HTML content your controller has produced
 
 						$('#datatable').html($data);

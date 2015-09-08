@@ -26,11 +26,7 @@
      	</div> <!--row-->
 
      	<div class="row bg-white">
-     		<div class="col-md-12">
-                 <div class="add-student">
-                 	<a class="admore" href="{{ url('student/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add a student</a>
-                 </div>
-     		</div>
+
 
      		<div class="col-md-12">
      			<div class="col-md-6 col-md-offset-3">

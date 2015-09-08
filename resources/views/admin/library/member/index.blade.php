@@ -28,7 +28,7 @@
      	<div class="row bg-white">
      		<div class="col-md-12">
                  <div class="add-student">
-                 	<a class="admore" href="{{ url('student/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add a student</a>
+                 	<a class="admore" href="{{ url('library/member/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add a Member</a>
                  </div>
      		</div>
 
@@ -93,10 +93,10 @@
 
 
 				$.ajax({
-					url: host + '/teacher',
+					url: host + '/student/table',
 					type: "GET", // not POST, laravel won't allow it
 					success: function(data){
-						alert(data);
+						/*alert(data);*/
 						$data = $(data); // the HTML content your controller has produced
 
 						$('#datatable').html($data);

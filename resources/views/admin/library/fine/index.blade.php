@@ -13,27 +13,21 @@
 			<div class="col-md-12">
 				<div class="student-box-header">
 					<div class="col-md-6">
-						<span class="glyphicon glyphicon-user " aria-hidden="true"></span>Parents
+						<span class="glyphicon glyphicon-user " aria-hidden="true"></span>Fine
 					</div>
 					<div class="col-md-6 snt">
 						<ul class="breadcrumb text-right">
 							<li>
 								<span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
 								<a href="#">Dashboard</a></li>
-							<li class="active">Parents</li>
+							<li class="active">Fine</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div> <!--row-->
 
-		<div class="row bg-white">
-			<div class="col-md-12">
-				<div class="add-student">
-					<a class="admore" href="{{ url('parent/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Parents</a>
-				</div>
-			</div>
-		</div>
+
 
 		<div class="row">
 			<div class="col-md-12">
