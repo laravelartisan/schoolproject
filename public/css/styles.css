@@ -54,9 +54,17 @@ ul.breadcrumb li.active{
 	padding: 20px 0;
 }
 .admore{
-	border-bottom: solid 1px #ccc;
     padding-bottom: 3px;
 }
+    .box {
+        position: relative;
+        border-radius: 3px;
+        background: #ffffff;
+        border-top: 1px solid #d2d6de;
+        margin-bottom: 20px;
+        width: 100%;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    }
 .class-holder{
 	width: 100%;
     float: left;
@@ -148,4 +156,11 @@ ul.folder-item li a:hover{
 
 .media .fa-2x {
     font-size: 8em;
+}
+.fa-man {
+    font-size: 3em;
+}
+.inner-box{
+    background-color: #fff;
+    padding: 15px;
 }
