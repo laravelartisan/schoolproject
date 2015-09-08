@@ -34,7 +34,7 @@
 				<div class="col-md-6 col-md-offset-3">
 					<div class="class-holder">
 						<form>
-							<label for="">Class</label>
+							<label for="">Exam</label>
 							<select id='classname' class="form-control">
 								<option>Select Class</option>
 								<option>One</option>
@@ -54,7 +54,7 @@
 								<option>Five</option>
 							</select>
 							<br>
-							<label for="">Class</label>
+							<label for="">Subject</label>
 							<select id='classname' class="form-control">
 								<option>Select Class</option>
 								<option>One</option>
