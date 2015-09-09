@@ -522,3 +522,5 @@ Route::get('admin2', function(){
     return view('admin2.index');
 
 });
+
+Route::post('user/add','School\UsersController@store');

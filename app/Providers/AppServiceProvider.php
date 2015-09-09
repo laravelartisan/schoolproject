@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace SchoolSoft\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
