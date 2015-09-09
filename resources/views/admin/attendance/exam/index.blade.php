@@ -26,116 +26,131 @@
 				</div>
 			</div>
 		</div> <!--row-->
-
-		<div class="row bg-white">
-			<div class="col-md-12">
-				<div class="add-student">
-					<a class="admore" href="{{ url('attendance/exam/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Exam Attendance</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<div class="col-md-6 col-md-offset-3">
-					<div class="class-holder">
-						<form>
-							<label for="">Class</label>
-							<select id='classname' class="form-control">
-								<option>Select Class</option>
-								<option>One</option>
-								<option>Two</option>
-								<option>Three</option>
-								<option>Four</option>
-								<option>Five</option>
-							</select>
-								<br>
-							<label for="">Class</label>
-							<select id='classname' class="form-control">
-								<option>Select Class</option>
-								<option>One</option>
-								<option>Two</option>
-								<option>Three</option>
-								<option>Four</option>
-								<option>Five</option>
-							</select>
-							<br>
-							<label for="">Class</label>
-							<select id='classname' class="form-control">
-								<option>Select Class</option>
-								<option>One</option>
-								<option>Two</option>
-								<option>Three</option>
-								<option>Four</option>
-								<option>Five</option>
-							</select>
-							<input type="submit" value="Submit">
-
-						</form>
+        <div class="inner-box">
+			<div class="row bg-white">
+				<div class="col-md-12">
+					<div class="add-student">
+						<a class="admore" href="{{ url('attendance/exam/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Exam Attendance</a>
 					</div>
 				</div>
 			</div>
 
-		</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-6 col-md-offset-3">					<div class="form-inner">	
+							<form>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">
+											Exam
+									</label>
+									<div class="col-sm-10">
+										<select class="form-control">		
+											<option>Select Exam</option>
+											<option>1st Semester</option>
+											<option>2nd Semester</option>
+											<option>3rd Semester</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">
+											Class
+									</label>
+									<div class="col-sm-10">
+										<select class="form-control">		
+											<option>Select Class</option>
+											<option>One</option>
+											<option>Two</option>
+											<option>Three</option>
+											<option>Four</option>
+											<option>Five</option>
+										</select>
+									</div>
+								</div>
 
-
-
-			{{--@include('admin.datatable')--}}
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="box">
-					<div class="box-header">
-						<h3 class="box-title">Data Table With Full Features</h3>
-					</div><!-- /.box-header -->
-					<div class="box-body">
-						<table id="example1" class="table table-bordered table-striped">
-							<thead>
-							<tr>
-								<th>ID</th>
-								<th>NAME</th>
-								<th>EMAIL</th>
-								<th>TYPE</th>
-								<th>GRADE</th>
-							</tr>
-							</thead>
-							<tbody>
-
-							@for ($i = 0; $i < 15; $i++)
-								<tr>
-									<td>Trident</td>
-									<td>Internet
-										Explorer 4.0</td>
-									<td>Win 95+</td>
-									<td> 4</td>
-									<td>X</td>
-								</tr>
-							@endfor
-
-
-
-
-							<tr>
-								<td>Other browsers</td>
-								<td>All others</td>
-								<td>-</td>
-								<td>-</td>
-								<td>U</td>
-							</tr>
-							</tbody>
-							<tfoot>
-							<tr>
-								<th>Rendering engine</th>
-								<th>Browser</th>
-								<th>Platform(s)</th>
-								<th>Engine version</th>
-								<th>CSS grade</th>
-							</tr>
-							</tfoot>
-						</table>
-					</div><!-- /.box-body -->
-				</div><!-- /.box -->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">
+											Subject
+									</label>
+									<div class="col-sm-10">
+										<select class="form-control">		
+											<option>Select subject</option>
+											<option>Bangla</option>
+											<option>English</option>
+											<option>Mathmatics</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12 text-right">
+										<input class="btn btn-primary" type="submit" value="View Attendance">
+									</div>
+								</div>
+							</form>	
+						</div>					
+					</div>
+				</div>
 			</div>
-		</div>
+
+
+				{{--@include('admin.datatable')--}}
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="box">
+						<div class="box-header">
+						</div><!-- /.box-header -->
+						<div class="box-body">
+							<table id="example1" class="table table-bordered table-striped">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Photo</th>
+										<th>Name</th>
+										<th>Phone</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+
+								@for ($i = 0; $i < 15; $i++)
+									<tr>
+										<td>1</td>
+										<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>
+										<td>Rakibul Islam</td>
+										<td>01734 55 55 55</td>
+										<td><a class="btn btn-primary btn-xs mrg" href="#">
+	                                        <i class="fa fa-check-square-o"></i></a> 
+	                                        <a class="btn btn-warning btn-xs mrg" href="#"><i class="fa fa-edit"></i></a>
+
+	                                        <a  class="btn btn-danger btn-xs mrg" href="#"><i class="fa fa-trash-o"></i></a>   </td>
+									</tr>
+								@endfor
+
+
+
+
+								<tr>
+									<td>Other browsers</td>
+									<td>All others</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								</tbody>
+								<tfoot>
+								<tr>
+									<th>Rendering engine</th>
+									<th>Browser</th>
+									<th>Platform(s)</th>
+									<th>Engine version</th>
+									<th>CSS grade</th>
+								</tr>
+								</tfoot>
+							</table>
+						</div><!-- /.box-body -->
+					</div><!-- /.box -->
+				</div>
+			</div>
 		</div>
 
 	</div>

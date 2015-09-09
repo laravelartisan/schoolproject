@@ -7,28 +7,8 @@
 
 @section('content')
 	<div class="container-fluid">
-
-
-		<div class="row first">
-			<div class="col-md-12">
-				<div class="student-box-header">
-					<div class="col-md-6">
-						<span class="glyphicon glyphicon-book" aria-hidden="true"></span>Mail / SMS Template
-					</div>
-					<div class="col-md-6 snt">
-						<ul class="breadcrumb text-right">
-							<li>
-								<span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
-								<a href="#">Dashboard</a></li>
-							<li class="active">Student</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div> <!--row first-->
-
 		<div class="row margin-top-area">
-			<div class="col-md-12 snt massage">
+			<div class="col-md-1d2 snt massage">
 				<div class="col-sm-3">
 					<button type="button" class="btn btn-primary btn-lg btn-block">Compose</button>
 					<div class="folder-wrapper">
@@ -65,29 +45,31 @@
 							<div class="col-sm-12">
 								<div class="box">
 									<div class="box-header">
-										<h3 class="box-title">Data Table With Full Features</h3>
 									</div><!-- /.box-header -->
 									<div class="box-body">
 										<table id="example1" class="table table-bordered table-striped">
 											<thead>
-											<tr>
-												<th>ID</th>
-												<th>NAME</th>
-												<th>EMAIL</th>
-												<th>TYPE</th>
-												<th>GRADE</th>
-											</tr>
+												<tr>
+													<th>#</th>
+													<th>Status</th>
+													<th>Name</th>
+													<th>Subject</th>
+													<th>Attach</th>
+													<th>Time</th>
+												</tr>
 											</thead>
 											<tbody>
 
 											@for ($i = 0; $i < 15; $i++)
 												<tr>
-													<td>Trident</td>
-													<td>Internet
-														Explorer 4.0</td>
-													<td>Win 95+</td>
-													<td> 4</td>
-													<td>X</td>
+													<td><input type="checkbox" class="checkbox btn btn-warning"></td>
+													<td>
+														<a href="#" class="fav"><i class="fa fa-star-o text-yellow"></i></a>
+													</td>
+													<td>Adam sindora</td>
+													<td class="text-bold">Lorem ipso</td>
+													<td></td>
+													<td>13 Aug 2015 21.29 PM</td>
 												</tr>
 											@endfor
 
@@ -99,18 +81,11 @@
 												<td>All others</td>
 												<td>-</td>
 												<td>-</td>
-												<td>U</td>
+												<td>-</td>
+												<td>-</td>
 											</tr>
 											</tbody>
-											<tfoot>
-											<tr>
-												<th>Rendering engine</th>
-												<th>Browser</th>
-												<th>Platform(s)</th>
-												<th>Engine version</th>
-												<th>CSS grade</th>
-											</tr>
-											</tfoot>
+											
 										</table>
 									</div><!-- /.box-body -->
 								</div><!-- /.box -->

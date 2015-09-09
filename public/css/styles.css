@@ -104,7 +104,9 @@ ul.breadcrumb li.active{
 
 
 /*-------------massage css-----------*/
-
+.massage{
+    //background-color: #fff;
+}
 .massage .folder-wrapper{
     width: 100%;
     margin-top: 20px;
@@ -145,7 +147,7 @@ ul.folder-item li a:hover{
 .massage .favorite-wrapper{
     width: 100%;
     border:solid 1px #efefef;
-    padding: 10px;
+    padding: 10px 0;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -163,4 +165,18 @@ ul.folder-item li a:hover{
 .inner-box{
     background-color: #fff;
     padding: 15px;
+}
+
+
+.form-inner{
+    width: 100%;
+    float: left;
+    background-color:#D9E0E7;
+    padding:15px 15px 0  15px;
+    margin-bottom: 15px;
+}
+.form-inner .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    float: left;
 }
