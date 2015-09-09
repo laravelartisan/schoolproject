@@ -64,7 +64,7 @@
                         {{--<label for="inputName" class="col-sm-2 control-label">Date of Birth</label>--}}
                         <div class="col-sm-10">
                             <div class='input-group date' id='datetimepicker'>
-                                {!! Form::date('birth_date',null,['class'=>'form-control']) !!}
+                                {!! Form::input('date','birth_date',date('d-m-y'),['class'=>'form-control']) !!}
                                 {{--<input type='text' class="form-control" />--}}
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -124,7 +124,7 @@
                         {{--<label for="inputName" class="col-sm-2 control-label">Joining Date</label>--}}
                         <div class="col-sm-10">
                             <div class='input-group date' id='datetimepicker'>
-                                {!! Form::date('joining_date',null,['class'=>'form-control']) !!}
+                                {!! Form::input('date','joining_date',date('d-m-y'),['class'=>'form-control']) !!}
 {{--                               {!! Form::date('joiningdate', \Carbon\Carbon::now()) !!} --}}
                                 {{--<input type='text' class="form-control" />--}}
                                 <span class="input-group-addon">

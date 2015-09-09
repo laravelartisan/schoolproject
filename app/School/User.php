@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Carbon\Carbon;
 
 class User extends Model implements AuthenticatableContract,
     AuthorizableContract,
@@ -31,11 +32,19 @@ class User extends Model implements AuthenticatableContract,
     protected $fillable = ['name','username','father_name','mother_name','guardian_name',
         'gender','designation','mother_profession','father_profession','address','religion',
         'phone','birth_date', 'joining_date','class','section','roll', 'email', 'password'];
-
+  /*  protected $dates = ['birth_date','joining_date'];*/
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
+   /* public function getBirthDateAttribute($value)
+    {
+        return Carbon::parse($value)->format('d-m-Y');
+    }*/
+  /*  public function setBirthDateAttribute($value)
+    {
+        $this->attributes['birth_date'] = Carbon::parse( $value);
+    }*/
     protected $hidden = ['password', 'remember_token'];
 }
