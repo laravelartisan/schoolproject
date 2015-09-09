@@ -8,28 +8,41 @@
 @section('content')
 	<div class="container-fluid">
 		<div class="row margin-top-area">
-			<div class="col-md-1d2 snt massage">
+			<div class="snt massage">
 				<div class="col-sm-3">
 					<button type="button" class="btn btn-primary btn-lg btn-block">Compose</button>
 					<div class="folder-wrapper">
 						<div class="folder-title">
 							<i class="fa fa-folder"></i> Folders
 						</div>
-						<ul class="folder-item">
-							<li><a href="#"><i class="fa fa-inbox"></i>
-									Inbox</a></li>
-							<li><a href="#">
-									<i class="fa fa-envelope-o"></i> Sent</a></li>
-							<li><a href="#">
-									<i class="fa fa-star-o"></i> Favourit</a></li>
-							<li><a href="#"><i class="fa fa-trash-o"></i> Trash </a></li>
-						</ul>
+						<ul class="nav nav-pills nav-stacked">
+						  	<li role="presentation" class="active">
+						  		<a href="#"><i class="fa fa-inbox"></i>Inbox
+						  		<span class="label label-info pull-right">4</span>
+						  		</a>
+
+						  	</li>
+						  	<li role="presentation">
+						  		<a href="#"><i class="fa fa-envelope-o"></i>Sent
+						  		<span class="label label-info pull-right">4</span>
+						  		</a>
+						  	</li>
+						  	<li role="presentation">
+							  	<a href="#"><i class="fa fa-star-o"></i> Favourit
+							  	</a>
+						  	</li>
+						  	<li role="presentation">
+						  		<a href="#"><i class="fa fa-trash-o"></i> Trash
+						  	</a>
+						  	</li>
+						</ul>						
 					</div>
 				</div> <!--col-sm-3-->
-				<div class="col-sm-9">
+				<div class="col-sm-9 nopaddingleft">
 					<div class="folder-title"> Favorite </div>
 					<div class="favorite-wrapper">
-						<div class="btn-group">
+					    <div class="col-md-12">
+						<div class="btn-group margin-top-area">
 							<button data-placement="top" data-toggle="tooltip" data-original-title="Selete mail" class="btn btn-info btn-sm" id="all">
 								<i class="fa fa-square-o"></i>
 							</button>
@@ -39,11 +52,12 @@
 							<button data-placement="top" data-toggle="tooltip" data-original-title="Refresh" id="refresh" class="btn btn-primary btn-sm">
 								<i class="fa fa-refresh"></i>
 							</button>
+							</div>
 						</div>
 
 						<div class="row">
 							<div class="col-sm-12">
-								<div class="box">
+								<div class="boxff">
 									<div class="box-header">
 									</div><!-- /.box-header -->
 									<div class="box-body">
