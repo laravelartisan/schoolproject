@@ -13,7 +13,7 @@
 			<div class="col-md-12">
 				<div class="student-box-header">
 					<div class="col-md-6">
-						<span class="glyphicon glyphicon-user " aria-hidden="true"></span>Transport
+						<i class="fa fa-hotel"></i> Transport
 					</div>
 					<div class="col-md-6 snt">
 						<ul class="breadcrumb text-right">
@@ -26,75 +26,68 @@
 				</div>
 			</div>
 		</div> <!--row-->
-
-		<div class="row bg-white">
-			<div class="col-md-12">
-				<div class="add-student">
-					<a class="admore" href="{{ url('transport/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Transport</a>
+ 		<div class="inner-box">
+			<div class="row bg-white">
+				<div class="col-md-12">
+					<div class="add-student">
+						<a class="admore" href="{{ url('transport/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Transport</a>
+					</div>
 				</div>
 			</div>
-		</div>
 
 
 
 			{{--@include('admin.datatable')--}}
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="box">
-					<div class="box-header">
-						<h3 class="box-title">Data Table With Full Features</h3>
-					</div><!-- /.box-header -->
-					<div class="box-body">
-						<table id="example1" class="table table-bordered table-striped">
-							<thead>
-							<tr>
-								<th>ID</th>
-								<th>NAME</th>
-								<th>EMAIL</th>
-								<th>TYPE</th>
-								<th>GRADE</th>
-							</tr>
-							</thead>
-							<tbody>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="box">
+						<div class="box-header">
+						</div><!-- /.box-header -->
+						<div class="box-body">
+							<table id="example1" class="table table-bordered table-striped">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Route Name</th>
+										<th>Number of Vehicle</th>
+										<th>Route Fare</th>
+										<th>Note</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
 
-							@for ($i = 0; $i < 15; $i++)
-								<tr>
-									<td>Trident</td>
-									<td>Internet
-										Explorer 4.0</td>
-									<td>Win 95+</td>
-									<td> 4</td>
-									<td>X</td>
-								</tr>
-							@endfor
+								@for ($i = 0; $i < 15; $i++)
+									<tr>
+										<td>1</td>
+										<td>Mirpur to Uttara </td>
+										<td>12</td>
+										<td> 18</td>
+										<td>Null</td>
+										<td><a class="btn btn-warning btn-xs mrg" href="#"><i class="fa fa-edit"></i></a>
+
+	                                        <a  class="btn btn-danger btn-xs mrg" href="#"><i class="fa fa-trash-o"></i></a> </td>
+									</tr>
+								@endfor
 
 
 
 
-							<tr>
-								<td>Other browsers</td>
-								<td>All others</td>
-								<td>-</td>
-								<td>-</td>
-								<td>U</td>
-							</tr>
-							</tbody>
-							<tfoot>
-							<tr>
-								<th>Rendering engine</th>
-								<th>Browser</th>
-								<th>Platform(s)</th>
-								<th>Engine version</th>
-								<th>CSS grade</th>
-							</tr>
-							</tfoot>
-						</table>
-					</div><!-- /.box-body -->
-				</div><!-- /.box -->
+									<tr>
+										<td>Other browsers</td>
+										<td>All others</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>								
+							</table>
+						</div><!-- /.box-body -->
+					</div><!-- /.box -->
+				</div>
 			</div>
 		</div>
-		</div>
-
 	</div>
 
 

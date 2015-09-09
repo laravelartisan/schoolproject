@@ -26,75 +26,74 @@
 				</div>
 			</div>
 		</div> <!--row-->
-
-		<div class="row bg-white">
-			<div class="col-md-12">
-				<div class="add-student">
-					<a class="admore" href="{{ url('mailsms/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Mail/Sms</a>
+		<div class="inner-box">
+			<div class="row bg-white">
+				<div class="col-md-12">
+					<div class="add-student">
+						<a class="admore" href="{{ url('mailsms/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Mail/Sms</a>
+					</div>
 				</div>
 			</div>
-		</div>
 
 
 {{--
 			@include('admin.datatable')--}}
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="box">
-					<div class="box-header">
-						<h3 class="box-title">Data Table With Full Features</h3>
-					</div><!-- /.box-header -->
-					<div class="box-body">
-						<table id="example1" class="table table-bordered table-striped">
-							<thead>
-							<tr>
-								<th>ID</th>
-								<th>NAME</th>
-								<th>EMAIL</th>
-								<th>TYPE</th>
-								<th>GRADE</th>
-							</tr>
-							</thead>
-							<tbody>
-
-							@for ($i = 0; $i < 15; $i++)
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="box">
+						<div class="box-header">
+						</div><!-- /.box-header -->
+						<div class="box-body">
+							<table id="example1" class="table table-bordered table-striped">
+								<thead>
 								<tr>
-									<td>Trident</td>
-									<td>Internet
-										Explorer 4.0</td>
-									<td>Win 95+</td>
-									<td> 4</td>
-									<td>X</td>
+									<th>#</th>
+									<th>Users</th>
+									<th>Type</th>
+									<th>Date and Time</th>
+									<th>Message</th>				
+									<th>Action</th>
 								</tr>
-							@endfor
+								</thead>
+								<tbody>
+
+								@for ($i = 0; $i < 15; $i++)
+									<tr>
+										<td>1</td>
+										<td> Students </td>
+										<td>Email </td>
+										<td> 13 Aug 2015 08:19:13 pm   </td>
+										<td> Hi, [student_name] </td>
+						
+										
+										<td>
+										<a class="btn btn-success btn-xs mrg" href="#"><i class="fa fa-check-square-o"></i></a>
+
+                                        </td>
+									</tr>
+								@endfor
 
 
 
 
-							<tr>
-								<td>Other browsers</td>
-								<td>All others</td>
-								<td>-</td>
-								<td>-</td>
-								<td>U</td>
-							</tr>
-							</tbody>
-							<tfoot>
-							<tr>
-								<th>Rendering engine</th>
-								<th>Browser</th>
-								<th>Platform(s)</th>
-								<th>Engine version</th>
-								<th>CSS grade</th>
-							</tr>
-							</tfoot>
-						</table>
-					</div><!-- /.box-body -->
-				</div><!-- /.box -->
+								<tr>
+									<td>Other browsers</td>
+									<td>All others</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									
+																		
+								</tr>
+								</tbody>
+								
+							</table>
+						</div><!-- /.box-body -->
+					</div><!-- /.box -->
+				</div>
 			</div>
 		</div>
-		</div>
-
 	</div>
 
 
