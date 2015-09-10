@@ -13,7 +13,7 @@
 			<div class="col-md-12">
 				<div class="student-box-header">
 					<div class="col-md-6">
-						<span class="glyphicon glyphicon-user " aria-hidden="true"></span>Fine
+						<i class="fa fa-scissors"></i> Fine
 					</div>
 					<div class="col-md-6 snt">
 						<ul class="breadcrumb text-right">

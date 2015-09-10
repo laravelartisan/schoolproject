@@ -105,11 +105,19 @@ ul.breadcrumb li.active{
 
 /*-------------massage css-----------*/
 .massage{
-    //background-color: #fff;
+    background-color: #fff;
+    width: 98%;
+    float: left;
+    margin: 0 1%;
+    padding: 20px 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .massage .folder-wrapper{
     width: 100%;
     margin-top: 20px;
+
 }
 .massage .folder-title{
     background-color: #000;
@@ -179,4 +187,10 @@ ul.folder-item li a:hover{
     margin-bottom: 15px;
     width: 100%;
     float: left;
+}
+.nopaddingleft{
+    padding-left: 0;
+}
+.mail .nav-tabs{
+    background-color: #ECF0F5;
 }

@@ -13,14 +13,14 @@
 			<div class="col-md-12">
 				<div class="student-box-header">
 					<div class="col-md-6">
-						<span class="glyphicon glyphicon-user " aria-hidden="true"></span>Mail/Sms
+						<i class="fa fa-mail-reply"></i> Mail/SMS
 					</div>
 					<div class="col-md-6 snt">
 						<ul class="breadcrumb text-right">
 							<li>
 								<span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
 								<a href="#">Dashboard</a></li>
-							<li class="active">Mail/Sms</li>
+							<li class="active">Mail/SMS</li>
 						</ul>
 					</div>
 				</div>
@@ -30,7 +30,7 @@
 			<div class="row bg-white">
 				<div class="col-md-12">
 					<div class="add-student">
-						<a class="admore" href="{{ url('mailsms/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Mail/Sms</a>
+						<a class="admore" href="{{ url('mailsms/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Mail/SMS</a>
 					</div>
 				</div>
 			</div>
