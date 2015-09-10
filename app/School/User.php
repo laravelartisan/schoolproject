@@ -32,7 +32,7 @@ class User extends Model implements AuthenticatableContract,
     protected $fillable = ['name','username','father_name','mother_name','guardian_name',
         'gender','designation','mother_profession','father_profession','address','religion',
         'phone','birth_date', 'joining_date','class','section','roll', 'email', 'password'];
-  /*  protected $dates = ['birth_date','joining_date'];*/
+//    protected $dates = ['birth_date','joining_date'];
     /**
      * The attributes excluded from the model's JSON form.
      *
@@ -42,9 +42,20 @@ class User extends Model implements AuthenticatableContract,
     {
         return Carbon::parse($value)->format('d-m-Y');
     }*/
-  /*  public function setBirthDateAttribute($value)
+    public function setBirthDateAttribute($value)
     {
-        $this->attributes['birth_date'] = Carbon::parse( $value);
-    }*/
+        $this->attributes['birth_date'] = Carbon::createFromFormat('d/m/Y',$value);
+    }
+
+    public function setJoiningDateAttribute($value)
+    {
+        $this->attributes['joining_date'] = Carbon::createFromFormat('d/m/Y',$value);
+    }
     protected $hidden = ['password', 'remember_token'];
+
+
+    public function photos()
+    {
+        return $this->morphMany('SchoolSoft\School\Photo', 'imageable');
+    }
 }
