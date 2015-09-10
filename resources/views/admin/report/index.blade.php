@@ -12,14 +12,14 @@
 			<div class="col-md-12">
 				<div class="student-box-header">
 					<div class="col-md-6">
-						<span class="glyphicon glyphicon-book" aria-hidden="true"></span>Report
+						<i class="fa fa-clipboard"></i> Report
 					</div>
 					<div class="col-md-6 snt">
 						<ul class="breadcrumb text-right">
 							<li>
 								<span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
 								<a href="#">Dashboard</a></li>
-							<li class="active">Student</li>
+							<li class="active">Report</li>
 						</ul>
 					</div>
 				</div>

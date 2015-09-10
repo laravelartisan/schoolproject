@@ -191,3 +191,6 @@ ul.folder-item li a:hover{
 .nopaddingleft{
     padding-left: 0;
 }
+.mail .nav-tabs{
+    background-color: #ECF0F5;
+}

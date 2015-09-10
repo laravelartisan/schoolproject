@@ -13,7 +13,7 @@
 			<div class="col-md-12">
 				<div class="student-box-header">
 					<div class="col-md-6">
-						<i class="fa fa-hotel"></i> Transport
+						<i class="fa fa-train"></i> Transport
 					</div>
 					<div class="col-md-6 snt">
 						<ul class="breadcrumb text-right">

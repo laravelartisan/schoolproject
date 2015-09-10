@@ -11,14 +11,14 @@
 			<div class="col-md-12">
 				<div class="student-box-header">
 					<div class="col-md-6">
-						<span class="glyphicon glyphicon-user " aria-hidden="true"></span>Notice
+						<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>Notice
 					</div>
 					<div class="col-md-6 snt">
 						<ul class="breadcrumb text-right">
 							<li>
 								<span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
 								<a href="#">Dashboard</a></li>
-							<li class="active">Parents</li>
+							<li class="active">Notice</li>
 						</ul>
 					</div>
 				</div>
