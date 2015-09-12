@@ -184,7 +184,7 @@
                         </div>
 
                     </div>
-                <div class="form-group {{ $errors->has('con_password')? 'has-error':'' }}">
+                <div class="form-group {{ $errors->has('password_confirmation')? 'has-error':'' }}">
                     {!! Form::label('password_confirmation','Confirm Password', ['class'=>'col-sm-2 control-label']) !!}
 
                     <div class="col-sm-10">

@@ -526,3 +526,6 @@ Route::get('admin2', function(){
 });
 
 Route::post('user/add','School\UsersController@store');
+Route::post('teacher/add', 'School\UsersController@store');
+Route::post('parent/add', 'School\UsersController@store');
+Route::post('student/add', 'School\UsersController@store');

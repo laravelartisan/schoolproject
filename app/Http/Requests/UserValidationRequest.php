@@ -36,16 +36,72 @@ class UserValidationRequest extends Request
             'religion'=> 'required',
             'email'=> 'required|email|unique:users,email',
             'phone'=> 'required',
-            'address'=> 'required|alpha_dash',
+            'address'=> 'required',
             'joining_date'=> 'required|date_format:d/m/Y',
             'photo'=> 'required|image',
             'type'=> 'required',
             'username'=> 'required|unique:users,username|alpha_dash',
             'password'=> 'required|confirmed|alpha_dash|digits_between:6,15',
-            'photo'=> 'required|max:1000',
+
 
         ];
-        $student = 'hello student';
+        $teacher = [
+
+            'name'=> 'required',
+
+            'birth_date'=> 'required|date_format:d/m/Y',
+            'gender'=> 'required',
+            'religion'=> 'required',
+            'email'=> 'required|email|unique:users,email',
+            'phone'=> 'required',
+            'address'=> 'required',
+            'joining_date'=> 'required|date_format:d/m/Y',
+            'photo'=> 'required|image',
+
+            'username'=> 'required|unique:users,username|alpha_dash',
+            'password'=> 'required|confirmed|alpha_dash|digits_between:6,15',
+
+
+        ];
+        $parent = [
+
+            'name'          => 'required',
+            'father_name'   => 'required',
+            'mother_name'   => 'required',
+            'profession'    => 'required',
+            'gender'        => 'required',
+
+            'email'         => 'required|email|unique:users,email',
+            'phone'         => 'required',
+            'address'       => 'required',
+
+            'photo'         => 'required|image',
+
+            'username'      => 'required|unique:users,username|alpha_dash',
+            'password'      => 'required|confirmed|alpha_dash|digits_between:6,15',
+
+
+        ];
+        $student = [
+
+            'name'=> 'required',
+            'father_name'   => 'required',
+            'mother_name'   => 'required',
+            'guardian_name' => 'required',
+            'birth_date'    => 'required|date_format:d/m/Y',
+            'gender'        => 'required',
+            'religion'      => 'required',
+            'email'         => 'required|email|unique:users,email',
+            'phone'         => 'required',
+            'address'       => 'required',
+
+            'photo'         => 'required|image',
+
+            'username'      => 'required|unique:users,username|alpha_dash',
+            'password'      => 'required|confirmed|alpha_dash|digits_between:6,15',
+
+
+        ];
         $requestpath = explode('/',\Route::getCurrentRoute()->getPath())[0];
 
         return $$requestpath;

@@ -28,134 +28,162 @@
         </div> <!--row-->
 
      	<div class="row margin-top-area">     		    
-     		<div class="col-md-8 snt">     			   			
-                <form class="form-horizontal">                   
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Name</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="#" placeholder="Name">
-                        </div>
+     		<div class="col-md-8 snt form-horizontal">
+                {!! Form::open(array('url' => 'student/add', 'files' => true)) !!}
+
+
+                <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
+                    {!! Form::label('name','Name', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('name',null,['class'=>'form-control']) !!}
+                        {!!  $errors->first('name','<span class="help-block">:message</span>')   !!}
                     </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Guardian</label>
-                        <div class="col-sm-10">
-                           <select class="form-control">
-                              <option>Rakibul Islam</option>
-                              <option>Mominul Islam</option>
-                              <option>Rakibul Islam</option>
-                              <option>Rakibul Islam</option>
-                              <option>Rakibul Islam</option>
-                              <option>Rakibul Islam</option>
-                            </select>   
-                        </div>
+
+                </div>
+                <div class="form-group {{ $errors->has('father_name')? 'has-error':'' }}">
+                    {!! Form::label('father','Father\'s name', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('father_name',null,['class'=>'form-control']) !!}
+                        {!!  $errors->first('father_name','<span class="help-block">:message</span>')   !!}
                     </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Date of Birth</label>
-                        <div class="col-sm-10">
-                            <div class='input-group date' id='datetimepicker'>
-                                <input type='text' class="form-control" />
-                                <span class="input-group-addon">
+
+                </div>
+                <div class="form-group {{ $errors->has('mother_name')? 'has-error':'' }}">
+                    {!! Form::label('mother','Mother\'s name', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('mother_name',null,['class'=>'form-control']) !!}
+                        {!!  $errors->first('mother_name','<span class="help-block">:message</span>')   !!}
+                    </div>
+
+                </div>
+
+                <div class="form-group {{ $errors->has('guardian_name')? 'has-error':'' }}">
+                    {!! Form::label('guardian_name','Guardian Name', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('guardian_name',null,['class'=>'form-control']) !!}
+                        {!!  $errors->first('guardian_name','<span class="help-block">:message</span>')   !!}
+                    </div>
+
+                </div>
+
+
+                <div class="form-group {{ $errors->has('birth_date')? 'has-error':'' }}">
+                    {!! Form::label('birthdate','Date of Birth', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        <div class='input-group date' id='datetimepicker'>
+                            {!! Form::input('date','birth_date',date('d/m/Y'),['class'=>'form-control']) !!}
+
+                            <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
-                            </div>
+                            {!!  $errors->first('birth_date','<span class="help-block">:message</span>')   !!}
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Gender</label>
-                        <div class="col-sm-10">
-                            <select class="form-control">
-                              <option>Male</option>
-                              <option>Female</option>
-                            </select> 
+
+                </div>
+
+
+
+                <div class="form-group {{ $errors->has('gender')? 'has-error':'' }}">
+                    {!! Form::label('gender','Gender', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10 ">
+
+                        {!! Form::select('gender', array( 'Male',  'Female'), 'Male', ['class'=>'form-control']) !!}
+                        {!!  $errors->first('gender','<span class="help-block">:message</span>')   !!}
+                    </div>
+
+                </div>
+                <div class="form-group {{ $errors->has('religion')? 'has-error':'' }}">
+                    {!! Form::label('religion','Religion', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('religion',null,['class'=>'form-control']) !!}
+                        {!!  $errors->first('religion','<span class="help-block">:message</span>')   !!}
+                    </div>
+
+                </div>
+                <div class="form-group {{ $errors->has('email')? 'has-error':'' }}">
+                    {!! Form::label('email','Email', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::email('email',null,['class'=>'form-control']) !!}
+                        {!!  $errors->first('email','<span class="help-block">:message</span>')   !!}
+                    </div>
+
+                </div>
+                <div class="form-group {{ $errors->has('phone')? 'has-error':'' }}">
+                    {!! Form::label('phone','Phone', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('phone',null,['class'=>'form-control']) !!}
+                        {!!  $errors->first('phone','<span class="help-block">:message</span>')   !!}
+                    </div>
+
+                </div>
+                <div class="form-group {{ $errors->has('address')? 'has-error':'' }}">
+                    {!! Form::label('address','Address', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('address',null,['class'=>'form-control']) !!}
+                        {!!  $errors->first('address','<span class="help-block">:message</span>')   !!}
+                    </div>
+
+                </div>
+
+
+                <div class="form-group {{ $errors->has('photo')? 'has-error':'' }}">
+                    {!! Form::label('photo','Photo', ['class'=>'col-sm-2 control-label col-xs-8 col-md-2']) !!}
+
+                    <div class="col-sm-2 col-xs-6 col-md-2">
+                        <div class="fileUpload btn btn-default form-control">
+                            <span class="fa fa-repeat"></span>
+                            <span>Upload</span>
+                            {!! Form::file('photo', [ 'class'=>'upload']) !!}
+                            {!!  $errors->first('photo','<span class="help-block">:message</span>')   !!}
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Religion</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="#">
-                        </div>
+
+                </div>
+
+
+                <div class="form-group {{ $errors->has('username')? 'has-error':'' }}">
+                    {!! Form::label('username','Username', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('username',null,['class'=>'form-control']) !!}
+                        {!!  $errors->first('username','<span class="help-block">:message</span>')   !!}
                     </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="#">
-                        </div>
+
+                </div>
+                <div class="form-group {{ $errors->has('password')? 'has-error':'' }}">
+                    {!! Form::label('password','Password', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::password('password', ['class'=>'form-control'])!!}
+                        {!!  $errors->first('password','<span class="help-block">:message</span>')   !!}
                     </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Phone</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="#">
-                        </div>
+
+                </div>
+                <div class="form-group {{ $errors->has('password_confirmation')? 'has-error':'' }}">
+                    {!! Form::label('password_confirmation','Confirm Password', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::password('password_confirmation', ['class'=>'form-control'])!!}
+                        {!!  $errors->first('password_confirmation','<span class="help-block">:message</span>')   !!}
                     </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Address</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="#">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Class</label>
-                        <div class="col-sm-10">
-                           <select class="form-control">
-                             <option>Select Class</option>
-                              <option>One</option>
-                              <option>Two</option>
-                              <option>Three</option>
-                              <option>Four</option>
-                              <option>Five</option>
-                            </select>  
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Section</label>
-                        <div class="col-sm-10">
-                           <select class="form-control">
-                             <option>Select Section</option>
-                              <option>Section One</option>
-                              <option>Section Two</option>
-                              <option>Section Three</option>
-                              <option>Section Four</option>
-                              <option>Section Five</option>
-                            </select>  
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Roll</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="#">
-                        </div>
-                    </div>                    
-                    <div class="form-group">                        
-                        <label for="photo" class="col-sm-2 control-label col-xs-8 col-md-2">
-                            Photo                        
-                        </label>
-                        <div class="col-sm-4 col-xs-6 col-md-4">
-                            <input class="form-control" id="uploadFile" placeholder="Choose File" disabled="">  
-                        </div>
-                        <div class="col-sm-2 col-xs-6 col-md-2">
-                            <div class="fileUpload btn btn-default form-control">
-                                <span class="fa fa-repeat"></span>
-                                <span>Upload</span>
-                                <input id="uploadBtn" type="file" class="upload" name="image">
-                            </div>
-                        </div>                    
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">User name</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="#">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Password</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" id="#">
-                        </div>
-                    </div>                   
-                    <div class="text-right">
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </div>                  
-                </form>     		               
+
+                </div>
+                <div class="text-right">
+                    {!! Form::submit('Submit',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
+
+                </div>
+                {!!  Form::close()   !!}
      		</div>
      	</div>
     </div>
