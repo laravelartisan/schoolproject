@@ -28,45 +28,59 @@
         </div> <!--row-->
          <div class="inner-box">
          	<div class="row margin-top-area">     		    
-         		<div class="col-md-8 snt">     			   			
-                    <form class="form-horizontal">                   
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Name</label>
+         		<div class="col-md-8 snt form-horizontal">  			   		{!! Form::open(array('url' => 'account/expense/add', 'files' => true)) !!}
+
+
+                        <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
+                            {!! Form::label('name','Name', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#" placeholder="Name">
+                                {!! Form::text('name',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('name','<span class="help-block">:message</span>')   !!}
                             </div>
+
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Date</label>
+                            
+                        <div class="form-group {{ $errors->has('date')? 'has-error':'' }}">
+                            {!! Form::label('date','Date', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
                                 <div class='input-group date' id='datetimepicker'>
-                                    <input type='text' class="form-control" />
+                                    {!! Form::input('date','date',date('d/m/Y'),['class'=>'form-control']) !!}
+
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
+                                    {!!  $errors->first('date','<span class="help-block">:message</span>')   !!}
                                 </div>
                             </div>
+
                         </div>
-                      
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Amount</label>
+                          
+                        <div class="form-group {{ $errors->has('amount')? 'has-error':'' }}">
+                            {!! Form::label('amount','Amount', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#">
+                                {!! Form::text('amount',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('amount','<span class="help-block">:message</span>')   !!}
                             </div>
+
                         </div>
-                       
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Note</label>
+                           
+                        <div class="form-group {{ $errors->has('note')? 'has-error':'' }}">
+                            {!! Form::label('note','Note', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
-                               <textarea name="" id="" cols="92" rows="4"></textarea>
+                                {!! Form::textarea('note',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('note','<span class="help-block">:message</span>')   !!}
                             </div>
+
                         </div>
-                                          
+
                         <div class="text-right">
-                            <button type="submit" class="btn btn-default">Submit</button>
+                            {!! Form::submit('Submit',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
                         </div>                  
-                    </form>     		               
+                   {!!  Form::close()   !!}	               
          		</div>
          	</div>
         </div>
