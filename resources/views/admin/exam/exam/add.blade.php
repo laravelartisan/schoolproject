@@ -26,40 +26,41 @@
                 </div>
             </div>
         </div> <!--row-->
-
-     	<div class="row margin-top-area">     		    
-     		<div class="col-md-8 snt">     			   			
-                <form class="form-horizontal">                   
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Exam Name</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="#" placeholder="Name">
+       <div class="inner-box">
+         	<div class="row margin-top-area">     		    
+         		<div class="col-md-8 snt">     			   			
+                    <form class="form-horizontal">                   
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Exam Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="#" placeholder="Name">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Date</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="#">
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Date</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="#">
+                            </div>
                         </div>
-                    </div>
 
 
 
 
 
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Note</label>
-                        <div class="col-sm-10">
-                            <textarea class="form-control" cols="" id="#"></textarea>
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Note</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" cols="" id="#"></textarea>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="text-right">
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </div>                  
-                </form>     		               
-     		</div>
-     	</div>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>                  
+                    </form>     		               
+         		</div>
+         	</div>
+        </div>
     </div>
 
 
