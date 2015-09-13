@@ -30,49 +30,34 @@
 				<div class="col-md-12 snt media">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="row">
-								<form>
-									<div class="form-group">
-										<label class="col-sm-2 control-label">
-											Teacher Report
-										</label>
-										<div class="col-sm-2">
-											<select class="form-control">
-												<option value="0">Select Teacher</option>
-												<option value="1">Shipu Ahamed</option>
-												<option value="2">Rid Islam</option>
-												<option value="3">Dipok Halder</option>
-												<option value="4">Shemanto Islam</option>
-												<option value="5">Imran Sarkar</option>
-											</select>
-										</div>
-										<div class="col-sm-8">
-											<input type="submit" value="Generate" class="btn btn-primary">
-										</div>
+							<div class="row form-horizontal">
+								 {!! Form::open(array('url' => 'report/index', 'files' => true)) !!}
+								<div class="form-group {{ $errors->has('teacher_name')? 'has-error':'' }}">
+                       			 {!! Form::label('teacher','Teacher Report', ['class'=>'col-sm-2 control-label']) !!}
+									<div class="col-sm-2">
+										{!! Form::select('teacher_name', array( 'Rakib',  'Rana'), 'Male', ['class'=>'form-control']) !!}
+                            			{!!  $errors->first('teacher_name','<span class="help-block">:message</span>')   !!}
 									</div>
-								</form>
+									<div class="col-sm-8">
+										<input type="submit" value="Generate" class="btn btn-primary">
+									</div>
+								</div>
+								 {!!  Form::close()   !!}
 							</div>
 
-							<div class="row">
-								<form>
-									<div class="form-group">
-										<label class="col-sm-2 control-label">
-											Student Report
-										</label>
+							<div class="row form-horizontal">
+								
+							{!! Form::open(array('url' => 'report/index', 'files' => true)) !!}
+								<div class="form-group {{ $errors->has('student_report')? 'has-error':'' }}">
+                       			 {!! Form::label('student','Student Report', ['class'=>'col-sm-2 control-label']) !!}
 										<div class="col-sm-2">
-											<select class="form-control">
-												<option>Select Class</option>
-												<option>Student Report </option>
-												<option>Student Report </option>
-											</select>
+											{!! Form::select('student_report', array( 'Rakib',  'Rana'), 'Male', ['class'=>'form-control']) !!}
+                            			{!!  $errors->first('student_report','<span class="help-block">:message</span>')   !!}
 										</div>
 
 										<div class="col-sm-2">
-											<select class="form-control">
-												<option>Select Section</option>
-												<option>Select Section</option>
-												<option>Select Section</option>
-											</select>
+											{!! Form::select('studentr_section', array( 'Rakib',  'Rana'), 'Male', ['class'=>'form-control']) !!}
+                            			{!!  $errors->first('studentr_section','<span class="help-block">:message</span>')   !!}
 										</div>
 
 										<div class="col-sm-6">

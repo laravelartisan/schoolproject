@@ -6,8 +6,6 @@
 @endsection
 @section('content')
 	<div class="container-fluid">
-
-
 		<div class="row">
 			<div class="col-md-12">
 				<div class="student-box-header">
@@ -27,35 +25,31 @@
 		</div> <!--row-->
 
 
-
-		<div class="row">
-			<div class="col-md-12">
-				<div class="col-md-6 col-md-offset-3">
-					<div class="class-holder">
-						<form>
-
-							<label for="">Attendance</label>
-							<select id='classname' class="form-control">
-								<option>Select Class</option>
-								<option>One</option>
-								<option>Two</option>
-								<option>Three</option>
-								<option>Four</option>
-								<option>Five</option>
-							</select>
-							<input type="submit" value="Submit">
-
-						</form>
+        <div class="inner-box">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="form-inner">	
+							<form>
+								<div class="form-group">
+		                            <label for="inputName" class="col-sm-2 control-label">Date</label>
+		                            <div class="col-sm-10">
+		                                <input type="text" class="form-control" id="#" >
+		                            </div>
+		                        </div>
+								
+								<div class="form-group">
+									<div class="col-sm-12 text-right">
+										<input class="btn btn-primary" type="submit" value="View Attendance">
+									</div>
+								</div>
+							</form>	
+						</div>
 					</div>
 				</div>
 			</div>
-
 		</div>
-
-
-
-
-		</div>
+	</div>
 
 
 

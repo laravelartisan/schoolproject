@@ -24,36 +24,35 @@
 				</div>
      		</div>
      	</div> <!--row-->
+		<div class="inner-box">
+	     	<div class="row bg-white">
+	     		<div class="col-md-12">
+	                 <div class="add-student">
+	                 	<a class="admore" href="{{ url('student/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add a student</a>
+	                 </div>
+	     		</div>
 
-     	<div class="row bg-white">
-     		<div class="col-md-12">
-                 <div class="add-student">
-                 	<a class="admore" href="{{ url('student/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add a student</a>
-                 </div>
-     		</div>
-
-     		<div class="col-md-12">
-     			<div class="col-md-6 col-md-offset-3">
-     				<div class="class-holder">
-     					<form>
-     					    <label for="">Class</label>
-     					 	<select id='classname' class="form-control">
-     					 	 <option>Select Class</option>
-							  <option>One</option>
-							  <option>Two</option>
-							  <option>Three</option>
-							  <option>Four</option>
-							  <option>Five</option>
-							</select>
-     					 </form>
-     				</div>
-     			</div>
-     		</div>
-     	</div>
-		<div id="datatable">
-
-
-
+	     		<div class="col-md-12">
+	     			<div class="col-md-6 col-md-offset-3">
+	     				<div class="class-holder">
+	     					<form>
+	     					    <label for="">Class</label>
+	     					 	<select id='classname' class="form-control">
+	     					 	 <option>Select Class</option>
+								  <option>One</option>
+								  <option>Two</option>
+								  <option>Three</option>
+								  <option>Four</option>
+								  <option>Five</option>
+								</select>
+	     					 </form>
+	     				</div>
+	     			</div>
+	     		</div>
+	     	</div>
+			<div id="datatable">
+				
+			</div>
 		</div>
 
 	</div>

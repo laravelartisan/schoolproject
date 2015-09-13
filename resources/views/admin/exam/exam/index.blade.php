@@ -60,8 +60,7 @@
 										<td>1st Semester </td>
 										<td> 01 Apr 2015 </td>
 										<td>Null</td>
-										<td><a class="btn btn-primary btn-xs mrg" href="#">
-                                        <i class="fa fa-check-square-o"></i></a> 
+										<td>
                                         <a class="btn btn-warning btn-xs mrg" href="#"><i class="fa fa-edit"></i></a>
 
                                         <a  class="btn btn-danger btn-xs mrg" href="#"><i class="fa fa-trash-o"></i></a> </td>

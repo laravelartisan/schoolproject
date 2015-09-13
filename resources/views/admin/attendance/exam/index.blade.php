@@ -13,12 +13,12 @@
 			<div class="col-md-12">
 				<div class="student-box-header">
 					<div class="col-md-6">
-						<span class="glyphicon glyphicon-user " aria-hidden="true"></span>Exam Attendance
+						<span class="glyphicon glyphicon-list" aria-hidden="true"></span>Exam Attendance
 					</div>
 					<div class="col-md-6 snt">
 						<ul class="breadcrumb text-right">
 							<li>
-								<span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
+								<span class="glyphicon glyphicon-n-list-alt" aria-hidden="true"></span>
 								<a href="#">Dashboard</a></li>
 							<li class="active">Exam Attendance</li>
 						</ul>

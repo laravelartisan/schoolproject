@@ -26,64 +26,61 @@
                 </div>
             </div>
         </div> <!--row-->
-
-     	<div class="row margin-top-area">     		    
-     		<div class="col-md-8 snt">     			   			
-                <form class="form-horizontal">                   
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Section</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="#" placeholder="Name">
+        <div class="inner-box">
+         	<div class="row margin-top-area">     		    
+         		<div class="col-md-8 snt">     			   			
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Class</label>
+                            <div class="col-sm-10">
+                               <select class="form-control">
+                                  <option>One</option>
+                                  <option>Two</option>
+                                  <option>Three</option>
+                                  <option>Four</option>
+                                  <option>Five</option>
+                                  <option>Six</option>
+                                </select>   
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Category</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="#">
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Teacher Name</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option>Rakib</option>
+                                    <option>Rana</option>
+                                    <option>Raihan</option>
+                                </select>
+                            </div>
+                        </div>                   
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Section</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="#" placeholder="Name">
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Class</label>
-                        <div class="col-sm-10">
-                           <select class="form-control">
-                              <option>One</option>
-                              <option>Two</option>
-                              <option>Three</option>
-                              <option>Four</option>
-                              <option>Five</option>
-                              <option>Six</option>
-                            </select>   
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Teacher Name</label>
-                        <div class="col-sm-10">
-                            <select class="form-control">
-                                <option>One</option>
-                                <option>Two</option>
-                                <option>Three</option>
-                                <option>Four</option>
-                                <option>Five</option>
-                                <option>Six</option>
-                            </select>
-                        </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Category</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="#">
+                            </div>
+                        </div>                       
 
 
-                    <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Note</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="#">
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Note</label>
+                            <div class="col-sm-10">
+                                <textarea name="" id="" cols="92" rows="4"></textarea>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="text-right">
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </div>                  
-                </form>     		               
-     		</div>
-     	</div>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>                  
+                    </form>     		               
+         		</div>
+         	</div>
+        </div>
     </div>
 
 
