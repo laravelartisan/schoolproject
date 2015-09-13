@@ -17,8 +17,11 @@ class ImageUploadListener
      * @return void
      */
     public $filename;
-    public function __construct()
+    public $photo;
+
+    public function __construct(Photo $photo)
     {
+        $this->photo = $photo;
 
     }
 
@@ -31,11 +34,12 @@ class ImageUploadListener
     public function handle(ImageUploadEvent $event )
     {
 
+//        dd($event->model->all());
         $this->filename = time().str_random(3).$event->file->getClientOriginalName();
         Image::make($event->file->getRealPath())->resize(200,200)->save('upload/'. $this->filename);
-        $photo = new Photo();
-        $photo->path= $this->filename;
-        $event->user->all()->last()->photos()->save($photo);
+       /* $photo = new Photo();*/
+        $this->photo->path= $this->filename;
+        $event->model->all()->last()->photos()->save( $this->photo);
 
 
     }

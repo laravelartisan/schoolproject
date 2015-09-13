@@ -17,11 +17,11 @@ class ImageUploadEvent extends Event
      * @return void
      */
     public $file;
-    public $user;
-    public function __construct(User $user, $file)
+    public $model;
+    public function __construct( $model, $file)
     {
         $this->file = $file;
-        $this->user = $user;
+        $this->model = $model;
 
 
     }

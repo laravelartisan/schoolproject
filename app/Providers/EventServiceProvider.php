@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'SchoolSoft\Events\SomeEvent' => [
-            'SchoolSoft\Listeners\EventListener',
+        'SchoolSoft\Events\ImageUploadEvent' => [
+            'SchoolSoft\Listeners\ImageUploadListener',
         ],
     ];
 

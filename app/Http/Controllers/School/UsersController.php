@@ -14,27 +14,28 @@ use SchoolSoft\School\Photo;
 use Intervention\Image\Facades\Image;
 class UsersController extends Controller
 {
-    public $user;
+    public $model;
+
 
     function __construct(User $user){
 
-        $this->user = $user;
+        $this->model = $user;
     }
 
     function store(UserValidationRequest $request ){
 
 
+//dd( $this->model->all() );
 
 
-
-        $this->user->create($request->all());
-        $this->filename = time().str_random(3).$request->file('photo')->getClientOriginalName();
+        $this->model->create($request->all());
+        /*$this->filename = time().str_random(3).$request->file('photo')->getClientOriginalName();
         Image::make($request->file('photo')->getRealPath())->resize(200,200)->save('upload/'. $this->filename);
         $photo = new Photo();
         $photo->path= $this->filename;
-        $this->user->all()->last()->photos()->save($photo);
+        $this->user->all()->last()->photos()->save($photo);*/
 
-      /*  \Event::fire(new ImageUploadEvent($this->user,$request->file('photo')));*/
+        \Event::fire(new ImageUploadEvent( $this->model,$request->file('photo')));
 
         return redirect()->back();
     }
