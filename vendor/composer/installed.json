@@ -3242,5 +3242,58 @@
             "thumbnail",
             "watermark"
         ]
+    },
+    {
+        "name": "dimsav/laravel-translatable",
+        "version": "v5.1",
+        "version_normalized": "5.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/dimsav/laravel-translatable.git",
+            "reference": "1116d7d15dcd3b3c96ad6df2b72694f919b90a3b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/dimsav/laravel-translatable/zipball/1116d7d15dcd3b3c96ad6df2b72694f919b90a3b",
+            "reference": "1116d7d15dcd3b3c96ad6df2b72694f919b90a3b",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~5.0",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "orchestra/testbench": "~3.0",
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2015-05-07 16:07:37",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Dimsav\\Translatable\\": "src/Translatable/"
+            },
+            "classmap": [
+                "tests"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dimitrios Savvopoulos",
+                "email": "ds@dimsav.com",
+                "homepage": "http://dimsav.com"
+            }
+        ],
+        "description": "A Laravel package for multilingual models",
+        "keywords": [
+            "database",
+            "language",
+            "laravel",
+            "translation"
+        ]
     }
 ]

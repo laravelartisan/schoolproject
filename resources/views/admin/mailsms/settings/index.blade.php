@@ -42,94 +42,114 @@
                             </li>
 
                         </ul>
-                        <div class="tab-content margin-top-area">
-                            <div class="tab-pane active" id="1">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="subject" class="col-sm-2 control-label">Username</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" id="subject">
+                        <div class="tab-content margin-top-area col-md-8 ">
+                            <div class="tab-pane  active form-horizontal" id="1">
+                                {!! Form::open(array('url' => 'mailsms/settings/index', 'files' => true)) !!}    
+                                    <div class="form-group {{ $errors->has('username')? 'has-error':'' }}">
+                             {!! Form::label('username','Username', ['class'=>'col-sm-2 control-label']) !!}
+                                    <div class="col-sm-10">
+                                          {!! Form::text('username',null,['class'=>'form-control']) !!}
+                                        {!!  $errors->first('username','<span class="help-block">:message</span>')   !!}
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="Password" class="col-sm-2 control-label">Password</label>
-                                        <div class="col-sm-4">
-                                            <input type="password" class="form-control" id="Password">
+                                   
+                                    
+                                    <div class="form-group {{ $errors->has('password')? 'has-error':'' }}">
+                                        {!! Form::label('password','Password No', ['class'=>'col-sm-2 control-label']) !!}
+                                        <div class="col-sm-10">
+                                            {!! Form::email('password',null,['class'=>'form-control']) !!}
+                                        {!!  $errors->first('password','<span class="help-block">:message</span>')   !!}
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="apikey" class="col-sm-2 control-label">Api Key</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" id="apikey">
+                                    <div class="form-group {{ $errors->has('api_key')? 'has-error':'' }}">
+                                         {!! Form::label('api_key','Api Key', ['class'=>'col-sm-2 control-label']) !!}
+                                        <div class="col-sm-10">
+                                             {!! Form::email('api_key',null,['class'=>'form-control']) !!}
+                                        {!!  $errors->first('api_key','<span class="help-block">:message</span>')   !!}
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="text-right">
-                                                <button type="submit" class="btn btn-default">Save</button>
+                                                {!! Form::submit('Save',['class'=>'btn btn-defualt','readonly'=>'readonly']) !!}
                                             </div>
                                         </div>
                                     </div>
 
-                                </form>
+                                {!!  Form::close()   !!}
                             </div> <!--tab-1-->
-                            <div class="tab-pane margin-top-area" id="2">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="AccountSID" class="col-sm-2 control-label">AccountSID </label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" id="AccountSID">
+                            <div class="tab-pane margin-top-area form-horizontal" id="2">      
+                            {!! Form::open(array('url' => 'mailsms/settings/index', 'files' => true)) !!}  
+
+                                    {!! Form::open(array('url' => 'mailsms/settings/index', 'files' => true)) !!}    
+                                    <div class="form-group {{ $errors->has('account_id')? 'has-error':'' }}">
+                             {!! Form::label('accounts','AccountSID', ['class'=>'col-sm-2 control-label']) !!}
+                                    <div class="col-sm-10">
+                                          {!! Form::text('account_id',null,['class'=>'form-control']) !!}
+                                        {!!  $errors->first('account_id','<span class="help-block">:message</span>')   !!}
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="Auth" class="col-sm-2 control-label">Auth Token </label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" id="Auth">
+                                   
+                                    
+                                    <div class="form-group {{ $errors->has('auth_token')? 'has-error':'' }}">
+                                        {!! Form::label('auth','Auth Token', ['class'=>'col-sm-2 control-label']) !!}
+                                        <div class="col-sm-10">
+                                            {!! Form::text('auth_token',null,['class'=>'form-control']) !!}
+                                        {!!  $errors->first('auth_token','<span class="help-block">:message</span>')   !!}
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="Number" class="col-sm-2 control-label">From Number </label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" id="Number">
+                                    <div class="form-group {{ $errors->has('form_number')? 'has-error':'' }}">
+                                         {!! Form::label('number','Form Number', ['class'=>'col-sm-2 control-label']) !!}
+                                        <div class="col-sm-10">
+                                             {!! Form::text('form_number',null,['class'=>'form-control']) !!}
+                                        {!!  $errors->first('form_number','<span class="help-block">:message</span>')   !!}
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="text-right">
-                                                <button type="submit" class="btn btn-default">Save</button>
+                                                {!! Form::submit('Save',['class'=>'btn btn-defualt','readonly'=>'readonly']) !!}
                                             </div>
                                         </div>
                                     </div>
 
-                                </form>
+                                {!!  Form::close()   !!}
                             </div> <!--tab-2-->
-                            <div class="tab-pane margin-top-area" id="3">
 
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="subject" class="col-sm-2 control-label">Username</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" id="subject">
+
+                            <div class="tab-pane margin-top-area form-horizontal" id="3">
+
+                                {!! Form::open(array('url' => 'mailsms/settings/index', 'files' => true)) !!}  
+
+                                    {!! Form::open(array('url' => 'mailsms/settings/index', 'files' => true)) !!}    
+                                    <div class="form-group {{ $errors->has('username')? 'has-error':'' }}">
+                             {!! Form::label('username','Username', ['class'=>'col-sm-2 control-label']) !!}
+                                    <div class="col-sm-10">
+                                          {!! Form::text('username',null,['class'=>'form-control']) !!}
+                                        {!!  $errors->first('username','<span class="help-block">:message</span>')   !!}
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="Password" class="col-sm-2 control-label">Password</label>
-                                        <div class="col-sm-4">
-                                            <input type="password" class="form-control" id="Password">
+                                   
+                                    
+                                    <div class="form-group {{ $errors->has('password')? 'has-error':'' }}">
+                                        {!! Form::label('password','Password', ['class'=>'col-sm-2 control-label']) !!}
+                                        <div class="col-sm-10">
+                                            {!! Form::text('password',null,['class'=>'form-control']) !!}
+                                        {!!  $errors->first('password','<span class="help-block">:message</span>')   !!}
                                         </div>
-                                    </div>
+                                    </div>                                    
 
                                     <div class="form-group">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="text-right">
-                                                <button type="submit" class="btn btn-default">Save</button>
+                                                {!! Form::submit('Save',['class'=>'btn btn-defualt','readonly'=>'readonly']) !!}
                                             </div>
                                         </div>
                                     </div>
 
-                                </form>
+                                {!!  Form::close()   !!}
                             </div> <!--tab-2-->
                         </div> <!--tab content-->
                     </div> <!--exTab2-->

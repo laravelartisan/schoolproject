@@ -39,99 +39,98 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="tab-content margin-top-area">
-                            <div class="tab-pane active" id="1">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">User</label>
-                                        <div class="col-sm-4">
-                                            <select class="form-control">
-                                                <option>Select User</option>
-                                                <option>Student</option>
-                                                <option>Parent</option>
-                                                <option>Teacher</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Template</label>
-                                        <div class="col-sm-4">
-                                            <select class="form-control">
-                                                <option>Select Template</option>
-                                                <option>Student result</option>
-                                                <option>Absence notice</option>
+                        <div class="tab-content col-md-8 margin-top-area">
+                            <div class="tab-pane form-horizontal active" id="1">
 
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="subject" class="col-sm-2 control-label">Subject</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control" id="subject">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Message</label>
-                                        <div class="col-sm-6">
-                                           <textarea name="" id="" cols="82" rows="4"></textarea>
-                                        </div>
-                                    </div>
+                               {!! Form::open(array('url' => 'mailsms/template/add', 'files' => true)) !!} 
+                                    <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
+                                        {!! Form::label('name','Name', ['class'=>'col-sm-2 control-label']) !!}
 
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label"></label>
-                                        <div class="col-sm-6 text-left">
-                                          <button type="submit" class="btn btn-default">Send</button> </div>
+                                        <div class="col-sm-10">
+                                            {!! Form::text('name',null,['class'=>'form-control']) !!}
+                                            {!!  $errors->first('name','<span class="help-block">:message</span>')   !!}
+                                        </div>
+                                    </div>
+                                    <div class="form-group {{ $errors->has('user')? 'has-error':'' }}">
+                                        {!! Form::label('user','User', ['class'=>'col-sm-2 control-label']) !!}
+
+                                        <div class="col-sm-10 ">
+
+                                            {!! Form::select('user', array( 'Student',  'Parent'), 'Select user', ['class'=>'form-control']) !!}
+                                            {!!  $errors->first('user','<span class="help-block">:message</span>')   !!}
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group {{ $errors->has('tag')? 'has-error':'' }}">
+                                        {!! Form::label('tag','Tag', ['class'=>'col-sm-2 control-label']) !!}
+
+                                        <div class="col-sm-10">
+                                            {!! Form::textarea('tag',null,['class'=>'form-control']) !!}
+                                            {!!  $errors->first('tag','<span class="help-block">:message</span>')   !!}
+                                        </div>
+                                    </div>
+                                    <div class="form-group {{ $errors->has('template')? 'has-error':'' }}">
+                                        {!! Form::label('template','Template', ['class'=>'col-sm-2 control-label']) !!}
+
+                                        <div class="col-sm-10">
+                                            {!! Form::textarea('template',null,['class'=>'form-control']) !!}
+                                            {!!  $errors->first('template','<span class="help-block">:message</span>')   !!}
+                                        </div>
                                     </div>
 
-                                </form>
+                                    <div class="form-group">     
+                                        <div class="col-sm-12 text-right">
+                                          {!! Form::submit('Submit',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
+                                          </div>
+                                    </div>
+
+                                 {!!  Form::close()   !!}
+
                             </div> <!--tab-1-->
-                            <div class="tab-pane margin-top-area" id="2">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">User</label>
-                                        <div class="col-sm-4">
-                                            <select class="form-control">
-                                                <option>Select User</option>
-                                                <option>Student</option>
-                                                <option>Parent</option>
-                                                <option>Teacher</option>
-                                            </select>
+                            <div class="tab-pane form-horizontal margin-top-area" id="2">
+                                {!! Form::open(array('url' => 'mailsms/template/add', 'files' => true)) !!} 
+                                    <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
+                                        {!! Form::label('name','Name', ['class'=>'col-sm-2 control-label']) !!}
+
+                                        <div class="col-sm-10">
+                                            {!! Form::text('name',null,['class'=>'form-control']) !!}
+                                            {!!  $errors->first('name','<span class="help-block">:message</span>')   !!}
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Template</label>
-                                        <div class="col-sm-4">
-                                            <select class="form-control">
-                                                <option>Select Template</option>
-                                                <option>Absence sms</option>
-                                                <option>Student result</option>
-                                            </select>
+                                    <div class="form-group {{ $errors->has('user')? 'has-error':'' }}">
+                                        {!! Form::label('user','User', ['class'=>'col-sm-2 control-label']) !!}
+
+                                        <div class="col-sm-10 ">
+
+                                            {!! Form::select('user', array( 'Student',  'Parent'), 'Select user', ['class'=>'form-control']) !!}
+                                            {!!  $errors->first('user','<span class="help-block">:message</span>')   !!}
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group {{ $errors->has('tag')? 'has-error':'' }}">
+                                        {!! Form::label('tag','Tag', ['class'=>'col-sm-2 control-label']) !!}
+
+                                        <div class="col-sm-10">
+                                            {!! Form::textarea('tag',null,['class'=>'form-control']) !!}
+                                            {!!  $errors->first('tag','<span class="help-block">:message</span>')   !!}
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Send by</label>
-                                        <div class="col-sm-4">
-                                            <select class="form-control">
-                                                <option>Select Send by</option>
-                                                <option>Student</option>
-                                                <option>Parent</option>
-                                                <option>Teacher</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Message</label>
-                                        <div class="col-sm-6">
-                                           <textarea name="" id="" cols="82" rows="4"></textarea>
+                                    <div class="form-group {{ $errors->has('template')? 'has-error':'' }}">
+                                        {!! Form::label('template','Template', ['class'=>'col-sm-2 control-label']) !!}
+
+                                        <div class="col-sm-10">
+                                            {!! Form::textarea('template',null,['class'=>'form-control']) !!}
+                                            {!!  $errors->first('template','<span class="help-block">:message</span>')   !!}
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label"></label>
-                                        <div class="col-sm-6 text-left">
-                                          <button type="submit" class="btn btn-default">Send</button> </div>
+                                    <div class="form-group">     
+                                        <div class="col-sm-12 text-right">
+                                          {!! Form::submit('Submit',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
+                                          </div>
                                     </div>
-                                </form>
+
+                                 {!!  Form::close()   !!}
                             </div> <!--tab-2-->
                         </div> <!--tab content-->
                     </div> <!--exTab2-->
