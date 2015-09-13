@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddProfessionToUsersTable extends Migration
+class TypeIdForegignKeyToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,11 @@ class AddProfessionToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('profession')->nullable();
+            $table->integer('type_id')->unsigned()->after('id');
+            $table->foreign('type_id')
+                ->references('id')->on('types')
+                ->onDelete('cascade');
+
         });
     }
 
@@ -25,7 +29,7 @@ class AddProfessionToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('profession');
+            $table->dropColumn('type_id');
         });
     }
 }

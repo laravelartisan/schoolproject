@@ -29,6 +29,7 @@
 			<div class="col-md-12">
 				<div class="add-student">
 					<a class="admore" href="{{ url('teacher/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add a Teacher</a>
+					<a class="admore" href="{{ url('user',[2]) }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> List of Teachers</a>
 				</div>
 			</div>
 		</div>

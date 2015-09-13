@@ -22,6 +22,17 @@ class UsersController extends Controller
         $this->model = $user;
     }
 
+    function index($typeId){
+
+
+
+        return $typeId;
+
+
+
+
+    }
+
     function store(UserValidationRequest $request ){
 
 
