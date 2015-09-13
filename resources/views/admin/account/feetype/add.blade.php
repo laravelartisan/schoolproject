@@ -28,26 +28,32 @@
         </div> <!--row-->
         <div class="inner-box">
          	<div class="row margin-top-area">     		    
-         		<div class="col-md-8 snt">     			   			
-                    <form class="form-horizontal">                   
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Fee Type </label>
+         		<div class="col-md-8 snt form-horizontal">    			   			
+                    {!! Form::open(array('url' => 'account/feetype/add', 'files' => true)) !!}                 
+                        <div class="form-group {{ $errors->has('fee_type')? 'has-error':'' }}">
+                        {!! Form::label('fee_type','Fee Type', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#" placeholder="Name">
+                                {!! Form::text('fee_type',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('fee_type','<span class="help-block">:message</span>')   !!}
                             </div>
+
                         </div>
 
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Fee Type </label>
+                        <div class="form-group {{ $errors->has('note')? 'has-error':'' }}">
+                        {!! Form::label('note','Note', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
-                                <textarea name="" id="" cols="92" rows="4"></textarea>
+                                {!! Form::textarea('note',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('note','<span class="help-block">:message</span>')   !!}
                             </div>
+
                         </div>
                                          
                         <div class="text-right">
-                            <button type="submit" class="btn btn-default">Submit</button>
+                             {!! Form::submit('Submit',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
                         </div>                  
-                    </form>     		               
+                     {!!  Form::close()   !!}		               
          		</div>
          	</div>
         </div>

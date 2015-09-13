@@ -27,39 +27,48 @@
             </div>
         </div> <!--row-->
         <div class="inner-box">
-         	<div class="row margin-top-area">                    		    <div class="col-md-8 snt">     			   			
-                    <form class="form-horizontal">
-                                          
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-3 control-label">Paypal Api Username </label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="#" placeholder="Name">
+         	<div class="row margin-top-area">                    		    <div class="col-md-8 snt form-horizontal">     			   			
+                     {!! Form::open(array('url' => 'account/settings/add', 'files' => true)) !!}
+                        <div class="form-group {{ $errors->has('username')? 'has-error':'' }}">
+                        {!! Form::label('username','Paypal Api Username', ['class'=>'col-sm-2 control-label']) !!}
+
+                            <div class="col-sm-10">
+                                {!! Form::text('username',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('username','<span class="help-block">:message</span>')   !!}
                             </div>
+
                         </div>
                         
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-3 control-label">Paypal Api Password </label>
-                            <div class="col-sm-9">
-                                <input type="password" class="form-control" id="#">
+                       <div class="form-group {{ $errors->has('password')? 'has-error':'' }}">
+                        {!! Form::label('password','Password', ['class'=>'col-sm-2 control-label']) !!}
+
+                            <div class="col-sm-10">
+                                {!! Form::text('password',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('password','<span class="help-block">:message</span>')   !!}
                             </div>
+
+                        </div>
+                        <div class="form-group {{ $errors->has('email')? 'has-error':'' }}">
+                        {!! Form::label('email','Paypal email', ['class'=>'col-sm-2 control-label']) !!}
+
+                            <div class="col-sm-10">
+                                {!! Form::text('email',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('email','<span class="help-block">:message</span>')   !!}
+                            </div>
+
                         </div>
                         <div class="form-group">
-                            <label for="inputName" class="col-sm-3 control-label">Paypal email </label>
-                            <div class="col-sm-9">
-                                <input type="email" class="form-control" id="#">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-3 control-label">Paypal Sandbox </label>
-                            <div class="col-sm-9">
+                            <label for="inputName" class="col-sm-2 control-label">Paypal Sandbox </label>
+                            <div class="col-sm-10">
                                <p class="form-control-static">Box will apread</p>
                             </div>
                         </div>                      
                                          
                         <div class="text-right">
-                            <button type="submit" class="btn btn-default">Submit</button>
+                            {!! Form::submit('Submit',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
+
                         </div>                  
-                    </form>     		               
+                    {!!  Form::close()   !!}	               
          		</div>
          	</div>
         </div>
