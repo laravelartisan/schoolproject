@@ -73,13 +73,13 @@ ul.breadcrumb li.active{
 	margin:20px 0;
 }
 .class-holder label{
-	width: 40%;
+	/* width: 40%; */
 	float: left;
 	text-align: center;
 	margin-top: 7px;
 }
 .class-holder .form-control{
-    width: 60%;
+    width: 90%;
 }
 
 .fileUpload input.upload {
