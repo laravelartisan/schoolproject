@@ -29,7 +29,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['name','username','father_name','mother_name','guardian_name',
+    protected $fillable = ['name','type_id','username','father_name','mother_name','guardian_name',
         'gender','designation','mother_profession','father_profession','address','religion',
         'phone','birth_date', 'joining_date','class','section','roll', 'email', 'password'];
 //    protected $dates = ['birth_date','joining_date'];
@@ -42,6 +42,14 @@ class User extends Model implements AuthenticatableContract,
     {
         return Carbon::parse($value)->format('d-m-Y');
     }*/
+   public function photoes(){
+
+       return $this->hasMany('SchoolSoft\School\Photo');
+   }
+    public function type()
+    {
+        return $this->belongsTo('SchoolSoft\School\Type');
+    }
     public function setBirthDateAttribute($value)
     {
         $this->attributes['birth_date'] = Carbon::createFromFormat('d/m/Y',$value);

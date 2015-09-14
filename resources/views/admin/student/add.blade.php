@@ -31,6 +31,18 @@
      		<div class="col-md-8 snt form-horizontal">
                 {!! Form::open(array('url' => 'student/add', 'files' => true)) !!}
 
+                <div class="form-group ">
+                    <div class="col-sm-2">
+
+                    </div>
+                    {{--<label for="inputName" class="col-sm-2 control-label">Name</label>--}}
+                    <div class="col-sm-10">
+
+                        {!! Form::hidden('type_id',1,['class'=>'form-control']) !!}
+
+                    </div>
+                </div>
+
 
                 <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
                     {!! Form::label('name','Name', ['class'=>'col-sm-2 control-label']) !!}
@@ -94,7 +106,7 @@
 
                     <div class="col-sm-10 ">
 
-                        {!! Form::select('gender', array( 'Male',  'Female'), 'Male', ['class'=>'form-control']) !!}
+                        {!! Form::select('gender', array( 'Male'=>'Male',  'Female'=>'Female'), null, ['class'=>'form-control']) !!}
                         {!!  $errors->first('gender','<span class="help-block">:message</span>')   !!}
                     </div>
 
@@ -135,8 +147,35 @@
                     </div>
 
                 </div>
+                <div class="form-group {{ $errors->has('class')? 'has-error':'' }}">
+                    {!! Form::label('class','Class', ['class'=>'col-sm-2 control-label']) !!}
 
+                    <div class="col-sm-10 ">
 
+                        {!! Form::select('class', array('One'=>'One',  'Two'=>'Two','Three'=>'Three'), null, ['class'=>'form-control']) !!}
+                        {!!  $errors->first('class','<span class="help-block">:message</span>')   !!}
+                    </div>
+
+                </div>
+                <div class="form-group {{ $errors->has('section')? 'has-error':'' }}">
+                    {!! Form::label('section','Section', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10 ">
+
+                        {!! Form::select('section', array('A'=>'A',  'B'=>'B','C'=>'C'), null, ['class'=>'form-control']) !!}
+                        {!!  $errors->first('section','<span class="help-block">:message</span>')   !!}
+                    </div>
+
+                </div>
+                <div class="form-group {{ $errors->has('roll')? 'has-error':'' }}">
+                    {!! Form::label('roll','Roll No', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('roll',null,['class'=>'form-control']) !!}
+                        {!!  $errors->first('roll','<span class="help-block">:message</span>')   !!}
+                    </div>
+
+                </div>
                 <div class="form-group {{ $errors->has('photo')? 'has-error':'' }}">
                     {!! Form::label('photo','Photo', ['class'=>'col-sm-2 control-label col-xs-8 col-md-2']) !!}
 
@@ -150,8 +189,6 @@
                     </div>
 
                 </div>
-
-
                 <div class="form-group {{ $errors->has('username')? 'has-error':'' }}">
                     {!! Form::label('username','Username', ['class'=>'col-sm-2 control-label']) !!}
 

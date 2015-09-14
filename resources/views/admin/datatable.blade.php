@@ -1,32 +1,45 @@
-<div class="row">
+<div class="row last">
     <div class="col-sm-12">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Data Table With Full Features</h3>
             </div><!-- /.box-header -->
             <div class="box-body">
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>NAME</th>
-                        <th>EMAIL</th>
-                        <th>TYPE</th>
-                        <th>GRADE</th>
+                        <th>#</th>
+                        <th>Photo</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Class</th>
+                        <th>Section</th>
+                        <th>Roll No</th>
+                        <th>Action</th>
+
                     </tr>
                     </thead>
                     <tbody>
+                    {{ $slno = 1 }}
+                    @foreach($studentsWithPhotos as $photo => $student) {{--@for ($i = 0; $i < 15; $i++)--}}
+                    <tr>
+                        <td>{{ $slno++ }}</td>
+                        <td>{!!  Html::image('imagecache/table/'.$photo) !!}</td>
+                        {{--<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>--}}
+                        <td>{{ $student->name }}</td>
+                        <td>{{ $student->email }}</td>
+                        <td>{{ $student->class }}</td>
+                        <td>{{ $student->section }}</td>
+                        <td>{{ $student->roll }}</td>
+                        <td>
+                            <a class="btn btn-primary btn-xs mrg" href="#">
+                                <i class="fa fa-check-square-o"></i></a>
+                            <a class="btn btn-warning btn-xs mrg" href="#"><i class="fa fa-edit"></i></a>
 
-                    @for ($i = 0; $i < 15; $i++)
-                        <tr>
-                            <td>Trident</td>
-                            <td>Internet
-                                Explorer 4.0</td>
-                            <td>Win 95+</td>
-                            <td> 4</td>
-                            <td>X</td>
-                        </tr>
-                    @endfor
+                            <a  class="btn btn-danger btn-xs mrg" href="#"><i class="fa fa-trash-o"></i></a>
+                        </td>
+
+                    </tr>
+                    @endforeach
 
 
 
@@ -36,7 +49,11 @@
                         <td>All others</td>
                         <td>-</td>
                         <td>-</td>
-                        <td>U</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+
                     </tr>
                     </tbody>
                     <tfoot>
@@ -46,10 +63,14 @@
                         <th>Platform(s)</th>
                         <th>Engine version</th>
                         <th>CSS grade</th>
+                        <th>Platform(s)</th>
+                        <th>Engine version</th>
+                        <th>CSS grade</th>
+
                     </tr>
                     </tfoot>
                 </table>
             </div><!-- /.box-body -->
         </div><!-- /.box -->
     </div>
-</div>
+</div> <!--row last-->

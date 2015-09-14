@@ -40,7 +40,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box">
-					<div class="box-header">						
+					<div class="box-header">
 					</div><!-- /.box-header -->
 					<div class="box-body">
 						<table id="example1" class="table table-bordered table-striped">
@@ -52,27 +52,28 @@
 								<th>Email</th>
 								<th>Type</th>
 								<th>Action</th>
-								
+
 							</tr>
 							</thead>
 							<tbody>
-
-							@for ($i = 0; $i < 15; $i++)
+							{{ $slno = 1 }}
+							@foreach($usersWithPhotos as $photo => $user){{--@for ($i = 0; $i < 15; $i++)--}}
 								<tr>
-									<td>1</td>
-									<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>
-									<td>Rakibul Islam</td>
-									<td>rakib@gmail.com</td>
-									<td>Accountant</td>
+									<td>{{ $slno++ }}</td>
+									<td>{!!  Html::image('imagecache/table/'.$photo) !!}</td>
+									{{--<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>--}}
+									<td>{{ $user->name }}</td>
+									<td>{{ $user->email }}</td>
+									<td>{{ $user->user_type }}</td>
 									<td>
 									<a class="btn btn-primary btn-xs mrg" href="#">
-                                        <i class="fa fa-check-square-o"></i></a> 
+                                        <i class="fa fa-check-square-o"></i></a>
                                         <a class="btn btn-warning btn-xs mrg" href="#"><i class="fa fa-edit"></i></a>
 
                                         <a  class="btn btn-danger btn-xs mrg" href="#"><i class="fa fa-trash-o"></i></a>   </td>
-									
+
 								</tr>
-							@endfor
+							@endforeach
 
 
 
@@ -84,7 +85,7 @@
 								<td>-</td>
 								<td>-</td>
 								<td>-</td>
-								
+
 							</tr>
 							</tbody>
 
@@ -96,7 +97,7 @@
 		</div> <!--inner-box-->
 	</div>
 
-	</div>
+
 
 
 @endsection

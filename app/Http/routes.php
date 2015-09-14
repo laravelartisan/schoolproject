@@ -24,13 +24,13 @@ Route::get('admin', function(){
     return view('admin.dashboard');
 
 });
-Route::get('student', function(){
+/*Route::get('student', function(){
 
 
 
     return view('admin.student.index');
 
-});
+});*/
 Route::get('student/add', function(){
 
 
@@ -39,20 +39,20 @@ Route::get('student/add', function(){
 
 });
 
-Route::get('student/table', function(){
+/*Route::get('student/table', function(){
 
 
 
     return view('admin.datatable');
 
-});
-Route::get('parent', function(){
+});*/
+/*Route::get('parent', function(){
 
 
 
     return view('admin.parents.index');
 
-});
+});*/
 Route::get('parent/add', function(){
 
 
@@ -60,13 +60,14 @@ Route::get('parent/add', function(){
     return view('admin.parents.add');
 
 });
-Route::get('teacher', function(){
+/*Route::get('teacher', function(){
 
 
 
     return view('admin.teacher.index');
 
-});
+});*/
+
 
 Route::get('teacher/add', function(){
 
@@ -75,13 +76,13 @@ Route::get('teacher/add', function(){
     return view('admin.teacher.add');
 
 });
-Route::get('user', function(){
+/*Route::get('user', function(){
 
 
 
     return view('admin.user.index');
 
-});
+});*/
 
 Route::get('user/add', function(){
 
@@ -527,5 +528,7 @@ Route::get('admin2', function(){
 
 Route::post('user/add','School\UsersController@store');
 Route::post('teacher/add', 'School\UsersController@store');
+Route::get('user/{typeId}', 'School\UsersController@index');
+Route:get('student/{class}','School\UsersController@getStudentByClass');
 Route::post('parent/add', 'School\UsersController@store');
 Route::post('student/add', 'School\UsersController@store');

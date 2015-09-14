@@ -39,7 +39,7 @@ class UserValidationRequest extends Request
             'address'=> 'required',
             'joining_date'=> 'required|date_format:d/m/Y',
             'photo'=> 'required|image',
-            'type'=> 'required',
+            'user_type'=> 'required',
             'username'=> 'required|unique:users,username|alpha_dash',
             'password'=> 'required|confirmed|alpha_dash|digits_between:6,15',
 
@@ -84,7 +84,7 @@ class UserValidationRequest extends Request
         ];
         $student = [
 
-            'name'=> 'required',
+            'name'          => 'required',
             'father_name'   => 'required',
             'mother_name'   => 'required',
             'guardian_name' => 'required',
@@ -94,7 +94,9 @@ class UserValidationRequest extends Request
             'email'         => 'required|email|unique:users,email',
             'phone'         => 'required',
             'address'       => 'required',
-
+            'class'         => 'required',
+            'section'       => 'required',
+            'roll'          => 'required',
             'photo'         => 'required|image',
 
             'username'      => 'required|unique:users,username|alpha_dash',

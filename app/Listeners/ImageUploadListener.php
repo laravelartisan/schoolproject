@@ -39,6 +39,7 @@ class ImageUploadListener
         Image::make($event->file->getRealPath())->resize(200,200)->save('upload/'. $this->filename);
        /* $photo = new Photo();*/
         $this->photo->path= $this->filename;
+        $this->photo->user_id = $event->model->all()->last()->id;
         $event->model->all()->last()->photos()->save( $this->photo);
 
 
