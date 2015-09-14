@@ -32,6 +32,17 @@
 
                {!! Form::open(array('url' => 'user/add', 'files' => true)) !!}
 
+                <div class="form-group ">
+                    <div class="col-sm-2">
+
+                    </div>
+                    {{--<label for="inputName" class="col-sm-2 control-label">Name</label>--}}
+                    <div class="col-sm-10">
+                        {!! Form::hidden('type_id',4,['class'=>'form-control']) !!}
+
+                    </div>
+                </div>
+
 
                     <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
                         {!! Form::label('name','Name', ['class'=>'col-sm-2 control-label']) !!}
@@ -84,7 +95,7 @@
 
                         <div class="col-sm-10 ">
 
-                            {!! Form::select('gender', array( 'Male',  'Female'), 'Male', ['class'=>'form-control']) !!}
+                            {!! Form::select('gender', array( 'Male'=>'Male',  'Female'=>'Female'), null, ['class'=>'form-control']) !!}
                             {!!  $errors->first('gender','<span class="help-block">:message</span>')   !!}
                         </div>
 
@@ -156,13 +167,13 @@
 
                     </div>
 
-                    <div class="form-group {{ $errors->has('type')? 'has-error':'' }}">
-                        {!! Form::label('type','Type', ['class'=>'col-sm-2 control-label']) !!}
+                    <div class="form-group {{ $errors->has('users_type')? 'has-error':'' }}">
+                        {!! Form::label('users_type','Type', ['class'=>'col-sm-2 control-label']) !!}
 
                         <div class="col-sm-10">
 
-                            {!! Form::select('type', array( 'Accountant',  'Librarian'), 'Librarian',['class'=>'form-control']) !!}
-                            {!!  $errors->first('type','<span class="help-block">:message</span>')   !!}
+                            {!! Form::select('users_type', array( 'Accountant'=>'Accountant',  'Librarian'=>'Librarian','Co-ordinator'=>'Co-ordinator'), null,['class'=>'form-control']) !!}
+                            {!!  $errors->first('users_type','<span class="help-block">:message</span>')   !!}
                         </div>
 
                     </div>

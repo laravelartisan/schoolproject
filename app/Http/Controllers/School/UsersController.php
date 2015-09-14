@@ -12,23 +12,52 @@ use SchoolSoft\Http\Requests\UserValidationRequest;
 use SchoolSoft\Events\ImageUploadEvent;
 use SchoolSoft\School\Photo;
 use Intervention\Image\Facades\Image;
+use SchoolSoft\School\Type;
 class UsersController extends Controller
 {
     public $model;
+    public $type;
 
 
-    function __construct(User $user){
+    function __construct(User $user, Type $type){
 
         $this->model = $user;
+        $this->type  = $type;
     }
 
     function index($typeId){
 
 
+        $usersWithPhotos = array();
+        $type = $this->type->find($typeId);
+        $users = $type->users;
+        foreach($users as $user){
 
-        return $typeId;
+            if( count($user->photos)>0)
+
+                $usersWithPhotos[$user->photos->first()->path] = $user;
+        }
+
+//        dd($this->type->find($typeId)->type_name);
+
+        return view('admin.'.$type->type_name.'.index', compact('usersWithPhotos'));
 
 
+
+
+    }
+    function getStudentByClass($className){
+
+        $studentsWithPhotos = [];
+        $studentsByClass = $this->model->whereClass($className)->get();
+        foreach(  $studentsByClass as $studentByClass){
+            if( count($studentByClass->photos)>0)
+
+            $studentsWithPhotos[$studentByClass->photos->first()->path] = $studentByClass;
+
+        }
+
+        return view('admin.datatable',compact('studentsWithPhotos'));
 
 
     }
@@ -36,15 +65,10 @@ class UsersController extends Controller
     function store(UserValidationRequest $request ){
 
 
-//dd( $this->model->all() );
-
+       /* dd( $this->model->all() );*/
+        /*dd($request->get('user_type'));*/
 
         $this->model->create($request->all());
-        /*$this->filename = time().str_random(3).$request->file('photo')->getClientOriginalName();
-        Image::make($request->file('photo')->getRealPath())->resize(200,200)->save('upload/'. $this->filename);
-        $photo = new Photo();
-        $photo->path= $this->filename;
-        $this->user->all()->last()->photos()->save($photo);*/
 
         \Event::fire(new ImageUploadEvent( $this->model,$request->file('photo')));
 

@@ -31,6 +31,17 @@
             <div class="col-md-8 snt form-horizontal">
                 {!! Form::open(array('url' => 'parent/add', 'files' => true)) !!}
 
+                <div class="form-group ">
+                    <div class="col-sm-2">
+
+                    </div>
+                    {{--<label for="inputName" class="col-sm-2 control-label">Name</label>--}}
+                    <div class="col-sm-10">
+                        {!! Form::hidden('type_id',3,['class'=>'form-control']) !!}
+
+                    </div>
+                </div>
+
                 <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
                     {!! Form::label('name','Name', ['class'=>'col-sm-2 control-label']) !!}
 

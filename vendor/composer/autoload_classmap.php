@@ -10,6 +10,8 @@ return array(
     'AddSeeds' => $vendorDir . '/dimsav/laravel-translatable/tests/migrations/2014_02_02_181020_add_seeds.php',
     'AddTypeIdToUsers' => $baseDir . '/database/migrations/2015_09_13_110906_add_type_id_to_users.php',
     'AddUserIdToPhotosTableForeignKey' => $baseDir . '/database/migrations/2015_09_13_112849_add_user_id_to_photos_table_foreign_key.php',
+    'AddUserTypeCollumnToUsers' => $baseDir . '/database/migrations/2015_09_14_102825_add_user_type_collumn_to_users.php',
+    'ChangeUserTypeToUsersType' => $baseDir . '/database/migrations/2015_09_14_112353_change_user_type_to_users_type.php',
     'CreatPhotosTable' => $baseDir . '/database/migrations/2015_09_10_092223_creat_photos_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateTables' => $vendorDir . '/dimsav/laravel-translatable/tests/migrations/2013_11_28_152610_create_tables.php',

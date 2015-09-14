@@ -51,7 +51,106 @@
 	     		</div>
 	     	</div>
 			<div id="datatable">
-				
+				{{--@include('admin.datatable')--}}
+
+
+
+				<div class="row last">
+					<div class="col-sm-12">
+						<div class="box">
+							<div class="box-header">
+							</div><!-- /.box-header -->
+							<div class="box-body">
+								<table id="example1" class="table table-bordered table-striped">
+									<thead>
+									<tr>
+										<th>#</th>
+										<th>Photo</th>
+										<th>Name</th>
+										<th>Email</th>
+										<th>Class</th>
+										<th>Section</th>
+										<th>Roll No</th>
+										<th>Action</th>
+
+									</tr>
+									</thead>
+									<tbody>
+									{{ $slno = 1 }}
+									@foreach($usersWithPhotos as $photo => $user) {{--@for ($i = 0; $i < 15; $i++)--}}
+									<tr>
+										<td>{{ $slno++ }}</td>
+										<td>{!!  Html::image('imagecache/table/'.$photo) !!}</td>
+										{{--<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>--}}
+										<td>{{ $user->name }}</td>
+										<td>{{ $user->email }}</td>
+										<td>{{ $user->class }}</td>
+										<td>{{ $user->section }}</td>
+										<td>{{ $user->roll }}</td>
+										<td>
+											<a class="btn btn-primary btn-xs mrg" href="#">
+												<i class="fa fa-check-square-o"></i></a>
+											<a class="btn btn-warning btn-xs mrg" href="#"><i class="fa fa-edit"></i></a>
+
+											<a  class="btn btn-danger btn-xs mrg" href="#"><i class="fa fa-trash-o"></i></a>
+										</td>
+
+									</tr>
+									@endforeach
+
+
+
+
+									<tr>
+										<td>Other browsers</td>
+										<td>All others</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+
+									</tr>
+									</tbody>
+									<tfoot>
+									<tr>
+										<th>Rendering engine</th>
+										<th>Browser</th>
+										<th>Platform(s)</th>
+										<th>Engine version</th>
+										<th>CSS grade</th>
+										<th>Platform(s)</th>
+										<th>Engine version</th>
+										<th>CSS grade</th>
+
+									</tr>
+									</tfoot>
+								</table>
+							</div><!-- /.box-body -->
+						</div><!-- /.box -->
+					</div>
+				</div> <!--row last-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			</div>
 		</div>
 
@@ -84,7 +183,8 @@
 			$('#classname').change(function()
 			{
 				/* setting currently changed option value to option variable */
-				var option = $(this).find('option:selected').val();
+				var className = $(this).find('option:selected').val();
+
 				/* setting input box value to selected option value */
 
 				/*alert(option);*/
@@ -92,7 +192,7 @@
 
 
 				$.ajax({
-					url: host + '/student/table',
+					url: host + '/student/' + className,
 					type: "GET", // not POST, laravel won't allow it
 					success: function(data){
 						/*alert(data);*/

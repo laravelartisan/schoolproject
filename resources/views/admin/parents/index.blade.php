@@ -54,13 +54,14 @@
 								</tr>
 								</thead>
 								<tbody>
-
-								@for ($i = 0; $i < 15; $i++)
+								{{ $slno = 1 }}
+								@foreach($usersWithPhotos as $photo => $user) {{--@for ($i = 0; $i < 15; $i++)--}}
 									<tr>
-										<td>1</td>
-										<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>
-										<td>Rakibul Islam</td>
-										<td>rakib@gmail.com</td>
+										<td>{{ $slno++ }}</td>
+										<td>{!!  Html::image('imagecache/table/'.$photo) !!}</td>
+										{{--<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>--}}
+										<td>{{ $user->name }}</td>
+										<td>{{ $user->email }}</td>
 										<td>
 										<a class="btn btn-primary btn-xs mrg" href="#">
 	                                        <i class="fa fa-check-square-o"></i></a> 
@@ -69,7 +70,7 @@
 	                                        <a  class="btn btn-danger btn-xs mrg" href="#"><i class="fa fa-trash-o"></i></a>   </td>
 										
 									</tr>
-								@endfor
+								@endforeach
 
 
 

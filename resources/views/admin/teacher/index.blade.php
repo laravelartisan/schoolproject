@@ -29,7 +29,7 @@
 			<div class="col-md-12">
 				<div class="add-student">
 					<a class="admore" href="{{ url('teacher/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add a Teacher</a>
-					<a class="admore" href="{{ url('user',[2]) }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> List of Teachers</a>
+
 				</div>
 			</div>
 		</div>
@@ -55,13 +55,14 @@
 							</tr>
 							</thead>
 							<tbody>
-
-							@for ($i = 0; $i < 15; $i++)
+								{{ $slno = 1 }}
+							@foreach($usersWithPhotos as $photo => $user) {{--($i = 0; $i < 15; $i++)--}}
 								<tr>
-									<td>1</td>
-									<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>
-									<td>Rakibul Islam</td>
-									<td>rakib@gmail.com</td>
+									<td>{{ $slno++ }}</td>
+									<td>{!!  Html::image('imagecache/table/'.$photo) !!}</td>
+									{{--<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>--}}
+									<td>{{ $user->name }}</td>
+									<td>{{ $user->email }}</td>
 									<td>
 									<a class="btn btn-primary btn-xs mrg" href="#">
                                         <i class="fa fa-check-square-o"></i></a> 
@@ -70,7 +71,7 @@
                                         <a  class="btn btn-danger btn-xs mrg" href="#"><i class="fa fa-trash-o"></i></a>   </td>
 									
 								</tr>
-							@endfor
+							@endforeach
 
 
 

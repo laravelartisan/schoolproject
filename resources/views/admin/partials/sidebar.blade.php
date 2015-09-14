@@ -26,10 +26,10 @@
             <li class="header">Dashboard</li>
 
             <li class="active"><a href="{{ url('admin') }}"><i class="fa fa-laptop text-red"></i><span>Dashboard</span></a></li>
-            <li class="active"><a href="{{ url('student') }}"><i class="fa fa-mortar-board text-red"></i><span>Student</span></a></li>
-            <li class="active"><a href="{{ url('parent') }}"><i class="fa fa-user text-red"></i><span>Parents</span></a></li>
-            <li class="active"><a href="{{ url('teacher') }}"><i class="fa fa fa-user text-red"></i><span>Teacher</span></a></li>
-            <li class="active"><a href="{{ url('user') }}"><i class="fa fa-users text-red"></i><span>User</span></a></li>
+            <li class="active"><a href="{{ url('user',[1]) }}"><i class="fa fa-mortar-board text-red"></i><span>Student</span></a></li>
+            <li class="active"><a href="{{ url('user',[3]) }}"><i class="fa fa-user text-red"></i><span>Parents</span></a></li>
+            <li class="active"><a href="{{ url('user',[2]) }}"><i class="fa fa fa-user text-red"></i><span>Teacher</span></a></li>
+            <li class="active"><a href="{{ url('user',[4]) }}"><i class="fa fa-users text-red"></i><span>User</span></a></li>
             <li class="active"><a href="{{ url('class') }}"><i class="fa fa-sitemap text-red"></i><span>Class</span></a></li>
             <li class="active"><a href="{{ url('section') }}"><i class="fa fa-star text-red"></i><span>Section</span></a></li>
             <li class="active"><a href="{{ url('subject') }}"><i class="fa fa-book text-red"></i><span>Subject</span></a></li>
