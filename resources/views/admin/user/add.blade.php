@@ -167,16 +167,16 @@
 
                     </div>
 
-                    <div class="form-group {{ $errors->has('users_type')? 'has-error':'' }}">
-                        {!! Form::label('users_type','Type', ['class'=>'col-sm-2 control-label']) !!}
+                {{--<div class="form-group {{ $errors->has('utype')? 'has-error':'' }}">
+                    {!! Form::label('utype','Type', ['class'=>'col-sm-2 control-label']) !!}
 
-                        <div class="col-sm-10">
+                    <div class="col-sm-10 ">
 
-                            {!! Form::select('users_type', array( 'Accountant'=>'Accountant',  'Librarian'=>'Librarian','Co-ordinator'=>'Co-ordinator'), null,['class'=>'form-control']) !!}
-                            {!!  $errors->first('users_type','<span class="help-block">:message</span>')   !!}
-                        </div>
-
+                        {!! Form::select('utype', array( 'Male'=>'Male',  'Female'=>'Female'), null, ['class'=>'form-control']) !!}
+                        {!!  $errors->first('utype','<span class="help-block">:message</span>')   !!}
                     </div>
+
+                </div>--}}
                     <div class="form-group {{ $errors->has('username')? 'has-error':'' }}">
                         {!! Form::label('username','Username', ['class'=>'col-sm-2 control-label']) !!}
 

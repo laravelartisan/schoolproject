@@ -17,6 +17,6 @@ class TableSize implements FilterInterface
     public function applyFilter(Image $image)
     {
         /*return $image->fit(120, 90)->greyscale();*/
-        return $image->fit(90, 90)->encode('jpg', 20);
+        return $image->fit(60,60)->encode('jpg', 20);
     }
 }

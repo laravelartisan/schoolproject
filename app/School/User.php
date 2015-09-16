@@ -31,7 +31,7 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $fillable = ['name','type_id','username','father_name','mother_name','guardian_name',
         'gender','designation','mother_profession','father_profession','address','religion',
-        'phone','birth_date', 'joining_date','class','section','roll', 'email', 'password'];
+        'phone','birth_date', 'joining_date','class','section','roll', 'email', 'password','profession'];
 //    protected $dates = ['birth_date','joining_date'];
     /**
      * The attributes excluded from the model's JSON form.

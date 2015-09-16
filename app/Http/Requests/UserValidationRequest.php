@@ -39,7 +39,7 @@ class UserValidationRequest extends Request
             'address'=> 'required',
             'joining_date'=> 'required|date_format:d/m/Y',
             'photo'=> 'required|image',
-            'user_type'=> 'required',
+
             'username'=> 'required|unique:users,username|alpha_dash',
             'password'=> 'required|confirmed|alpha_dash|digits_between:6,15',
 

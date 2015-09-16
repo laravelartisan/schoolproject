@@ -62,6 +62,63 @@ class UsersController extends Controller
 
     }
 
+    function view($userId,$typeId){
+
+        $type = $this->type->find($typeId);
+        $userProfile = $this->model->whereId($userId)
+                                    ->whereTypeId($typeId)
+                                    ->first();
+//dd($userProfile);
+        if(!is_null($userProfile))
+
+
+
+        return view('admin.'.$type->type_name.'.view',compact('userProfile'));
+        abort(404);
+
+
+    }
+    function edit($userId,$typeId){
+
+        $type = $this->type->find($typeId);
+        $userProfile = $this->model->whereId($userId)
+            ->whereTypeId($typeId)
+            ->first();
+
+        if(!is_null($userProfile))
+        return view('admin.'.$type->type_name.'.edit',compact('userProfile'));
+        abort(404);
+
+    }
+
+
+
+    function update($userId,$typeId, Request $request){
+
+        $userProfile = $this->model->whereId($userId)
+                                    ->whereTypeId($typeId)
+                                    ->first();
+        if(!is_null($userProfile))
+        $userProfile->fill($request->all())->save();
+
+        //image not updated
+
+        return redirect()->route('userlist',[$typeId]);
+
+
+    }
+
+    function delete ($userId, $typeId)
+    {
+
+        $userToDelete = $this->model->whereId($userId)->first();
+
+        if ($userToDelete->delete())
+            return redirect()->route('userlist',[$typeId]);
+
+
+
+    }
     function store(UserValidationRequest $request ){
 
 
@@ -72,6 +129,8 @@ class UsersController extends Controller
 
         \Event::fire(new ImageUploadEvent( $this->model,$request->file('photo')));
 
-        return redirect()->back();
+
+
+        return redirect()->route('userlist',[$this->model->all()->last()->type['id']]);
     }
 }

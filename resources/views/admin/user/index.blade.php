@@ -50,7 +50,7 @@
 								<th>Photo</th>
 								<th>Name</th>
 								<th>Email</th>
-								<th>Type</th>
+
 								<th>Action</th>
 
 							</tr>
@@ -64,13 +64,13 @@
 									{{--<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>--}}
 									<td>{{ $user->name }}</td>
 									<td>{{ $user->email }}</td>
-									<td>{{ $user->user_type }}</td>
-									<td>
-									<a class="btn btn-primary btn-xs mrg" href="#">
-                                        <i class="fa fa-check-square-o"></i></a>
-                                        <a class="btn btn-warning btn-xs mrg" href="#"><i class="fa fa-edit"></i></a>
 
-                                        <a  class="btn btn-danger btn-xs mrg" href="#"><i class="fa fa-trash-o"></i></a>   </td>
+									<td>
+									<a class="btn btn-primary btn-xs mrg" href="{{ url('user/view',[$user->id,4]) }}">
+                                        <i class="fa fa-check-square-o"></i></a>
+                                        <a class="btn btn-warning btn-xs mrg" href="{{ url('user/edit',[$user->id,4]) }}"><i class="fa fa-edit"></i></a>
+
+                                        <a  class="btn btn-danger btn-xs mrg" href="{{ url('user/delete',[$user->id,4]) }}"><i class="fa fa-trash-o"></i></a>   </td>
 
 								</tr>
 							@endforeach
@@ -82,7 +82,7 @@
 								<td>Other browsers</td>
 								<td>All others</td>
 								<td>-</td>
-								<td>-</td>
+
 								<td>-</td>
 								<td>-</td>
 
