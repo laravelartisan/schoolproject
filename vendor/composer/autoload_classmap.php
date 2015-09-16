@@ -14,6 +14,7 @@ return array(
     'AddUtypeToUsers' => $baseDir . '/database/migrations/2015_09_15_045419_add_utype_to_users.php',
     'ChangeUserTypeToUsersType' => $baseDir . '/database/migrations/2015_09_14_112353_change_user_type_to_users_type.php',
     'CreatPhotosTable' => $baseDir . '/database/migrations/2015_09_10_092223_creat_photos_table.php',
+    'CreateArticlesTable' => $baseDir . '/database/migrations/2015_09_16_101628_create_articles_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateTables' => $vendorDir . '/dimsav/laravel-translatable/tests/migrations/2013_11_28_152610_create_tables.php',
     'CreateTypesTable' => $baseDir . '/database/migrations/2015_09_13_110004_create_types_table.php',

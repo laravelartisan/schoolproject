@@ -536,3 +536,9 @@ Route::get('user/delete/{userId}/{typeId}', 'School\UsersController@delete');
 Route:get('student/{class}','School\UsersController@getStudentByClass');
 Route::post('parent/add', 'School\UsersController@store');
 Route::post('student/add', 'School\UsersController@store');
+
+//multilingual test application
+
+
+
+
