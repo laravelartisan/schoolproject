@@ -36,15 +36,17 @@
 	     			<div class="col-md-6 col-md-offset-3">
 	     				<div class="class-holder">
 	     					<form>
-	     					    <label for="">Class</label>
-	     					 	<select id='classname' class="form-control">
-	     					 	 <option>Select Class</option>
-								  <option>One</option>
-								  <option>Two</option>
-								  <option>Three</option>
-								  <option>Four</option>
-								  <option>Five</option>
-								</select>
+	     					    <label class="col-md-2" for="">Class</label>
+	     					    <div class="col-sm-10">
+		     					 	<select id='classname' class="form-control" >
+		     					 	 <option>Select Class</option>
+									  <option>One</option>
+									  <option>Two</option>
+									  <option>Three</option>
+									  <option>Four</option>
+									  <option>Five</option>
+									</select>
+								</div>
 	     					 </form>
 	     				</div>
 	     			</div>

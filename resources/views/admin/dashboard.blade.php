@@ -107,11 +107,11 @@
                 <div class="box-body chat" id="chat-box">
                   <!-- chat item -->
                   <div class="item">
-                    <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
+                    <img src="dist/img/boxed-bg.jpg" alt="user image" class="online">
                     <p class="message">
                       <a href="#" class="name">
                         <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                        Mike Doe
+                       Mahmud
                       </a>
                       I would like to meet you to discuss the latest news about
                       the arrival of the new theme. They say it is going to be one the
@@ -129,11 +129,11 @@
                   </div><!-- /.item -->
                   <!-- chat item -->
                   <div class="item">
-                    <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
+                     <img src="{{ asset('bower_components/admin-lte/dist/img/Shohag.jpg') }}" class="img-circle" alt="User Image">
                     <p class="message">
                       <a href="#" class="name">
                         <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
-                        Alexander Pierce
+                        Rakibul Hossain
                       </a>
                       I would like to meet you to discuss the latest news about
                       the arrival of the new theme. They say it is going to be one the
@@ -142,11 +142,11 @@
                   </div><!-- /.item -->
                   <!-- chat item -->
                   <div class="item">
-                    <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+                     <img src="{{ asset('bower_components/admin-lte/dist/img/Shohag.jpg') }}" class="img-circle" alt="User Image">
                     <p class="message">
                       <a href="#" class="name">
                         <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
-                        Susan Doe
+                        Shahin Alom
                       </a>
                       I would like to meet you to discuss the latest news about
                       the arrival of the new theme. They say it is going to be one the

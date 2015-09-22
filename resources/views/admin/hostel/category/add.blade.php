@@ -28,41 +28,51 @@
         </div> <!--row-->
       <div class="inner-box">
          	<div class="row margin-top-area">     		    
-         		<div class="col-md-8 snt">     			   			
-                    <form class="form-horizontal">                   
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Hostel Name </label>
-                            <div class="col-sm-10">
-                               <select class="form-control">
-                                  <option>Dhaka student Hostel</option>
-                                  <option>Bogra student Hostel</option>
-                                  <option>Rajshahi student Hostel</option>                                  
-                                </select>   
-                            </div>
+         		<div class="col-md-8 snt form-horizontal">     			   			
+                    {!! Form::open(array('url' => 'hostel/category/add', 'files' => true)) !!}                 
+                        <div class="form-group {{ $errors->has('hostel_name')? 'has-error':'' }}">
+                        {!! Form::label('hostel_name','Hostel Name', ['class'=>'col-sm-2 control-label']) !!}
+
+                        <div class="col-sm-10">
+
+                            {!! Form::select('hostel_name', array( 'Bogra Student Hostel'=>'Bogra Student Hostel',  'Dhaka Student Hostel'=>'Dhaka Student Hostel','Rajshahi Student Hostel'=>'Rajshahi Student Hostel'), null,['class'=>'form-control']) !!}
+                            {!!  $errors->first('hostel_name','<span class="help-block">:message</span>')   !!}
                         </div>
+
+                    </div>
                        
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Class Type </label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#">
-                            </div>
+                         <div class="form-group {{ $errors->has('class_type')? 'has-error':'' }}">
+                        {!! Form::label('class_type','Class Type', ['class'=>'col-sm-2 control-label']) !!}
+
+                        <div class="col-sm-10">
+                            {!! Form::text('class_type',null,['class'=>'form-control']) !!}
+                            {!!  $errors->first('class_type','<span class="help-block">:message</span>')   !!}
                         </div>
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Hostel Fee </label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#">
-                            </div>
+
+                    </div>
+                         <div class="form-group {{ $errors->has('hostel_fee')? 'has-error':'' }}">
+                        {!! Form::label('hostel_fee','Hostel Fee', ['class'=>'col-sm-2 control-label']) !!}
+
+                        <div class="col-sm-10">
+                            {!! Form::text('hostel_fee',null,['class'=>'form-control']) !!}
+                            {!!  $errors->first('hostel_fee','<span class="help-block">:message</span>')   !!}
                         </div>
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Note</label>
-                            <div class="col-sm-10">
-                                <textarea name="" id="" cols="92" rows="4"></textarea>
-                            </div>
-                        </div>                                           
+
+                    </div>
+                         <div class="form-group {{ $errors->has('note')? 'has-error':'' }}">
+                        {!! Form::label('note','Note', ['class'=>'col-sm-2 control-label']) !!}
+
+                        <div class="col-sm-10">
+                            {!! Form::textarea('note',null,['class'=>'form-control']) !!}
+                            {!!  $errors->first('note','<span class="help-block">:message</span>')   !!}
+                        </div>
+
+                    </div>                                          
                         <div class="text-right">
-                            <button type="submit" class="btn btn-default">Submit</button>
+                             {!! Form::submit('Submit',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
+
                         </div>                  
-                    </form>     		               
+                     {!!  Form::close()   !!}		               
          		</div>
          	</div>
         </div>

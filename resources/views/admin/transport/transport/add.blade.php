@@ -28,37 +28,53 @@
         </div> <!--row-->
         <div class="inner-box">
          	<div class="row margin-top-area">     		    
-         		<div class="col-md-8 snt">     			   			
-                    <form class="form-horizontal">                   
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Route Name </label>
+         		<div class="col-md-8 snt form-horizontal">     			   			
+                    {!! Form::open(array('url' => 'transport/transport/add', 'files' => true)) !!}                  
+                        <div class="form-group {{ $errors->has('route_name')? 'has-error':'' }}">
+                        {!! Form::label('route_name','Route Name', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#" placeholder="Name">
+                                {!! Form::text('route_name',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('route_name','<span class="help-block">:message</span>')   !!}
                             </div>
+
                         </div>
-                         <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Number of Vehicle </label>
+
+                        <div class="form-group {{ $errors->has('vehicle')? 'has-error':'' }}">
+                        {!! Form::label('vehicle','Number of Vehicle', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#" placeholder="Name">
+                                {!! Form::text('vehicle',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('vehicle','<span class="help-block">:message</span>')   !!}
                             </div>
+
                         </div>
-                         <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Route Fare </label>
+
+                        <div class="form-group {{ $errors->has('route_fare')? 'has-error':'' }}">
+                        {!! Form::label('route_fare','Route Fare', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#" placeholder="Name">
+                                {!! Form::text('route_fare',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('route_fare','<span class="help-block">:message</span>')   !!}
                             </div>
+
                         </div>
-                         <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Note </label>
+
+                        <div class="form-group {{ $errors->has('note')? 'has-error':'' }}">
+                        {!! Form::label('note','Note', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
-                                <textarea name="" id="" cols="92" rows="4"></textarea>
+                                {!! Form::text('note',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('note','<span class="help-block">:message</span>')   !!}
                             </div>
+
                         </div>
                                           
                         <div class="text-right">
-                            <button type="submit" class="btn btn-default">Submit</button>
+                           {!! Form::submit('Submit',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
+
                         </div>                  
-                    </form>     		               
+                     {!!  Form::close()   !!} 		               
          		</div>
          	</div>
         </div>

@@ -25,28 +25,26 @@
      		</div>
      	</div> <!--row-->
         <div class="inner-box">
-	     	<div class="row bg-white">     		
-
+	     	<div class="row bg-white">
 	     		<div class="col-md-12">
 	     			<div class="col-md-6 col-md-offset-3">
 	     				<div class="class-holder">
-	     					<form>
-	     					    <label for="">Class</label>
-	     					 	<select id='classname' class="form-control">
-	     					 	 <option>Select Class</option>
-								  <option>One</option>
-								  <option>Two</option>
-								  <option>Three</option>
-								  <option>Four</option>
-								  <option>Five</option>
-								</select>
-	     					 </form>
+	     					{!! Form::open(array('url' => 'transport/member/add', 'files' => true)) !!}
+	     					    <div class="form-group {{ $errors->has('class')? 'has-error':'' }}">
+		                        {!! Form::label('class','Class', ['class'=>'col-sm-3 control-label']) !!}
+
+		                        <div class="col-sm-9 ">
+		                            {!! Form::select('class', array( 'One',  'Two'), 'Class', ['class'=>'form-control']) !!}
+		                            {!!  $errors->first('class','<span class="help-block">:message</span>')   !!}
+		                        </div>
+
+		                    </div>
+	     					 {!!  Form::close()   !!}
 	     				</div>
 	     			</div>
 	     		</div>
 	     	</div>
 			<div id="datatable">
-
 
 				{{--		@include('admin.datatable')--}}
 			</div>

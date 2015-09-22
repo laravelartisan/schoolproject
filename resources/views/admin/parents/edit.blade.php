@@ -20,13 +20,14 @@
                             <li>
                                 <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
                                 <a href="#">Dashboard</a></li>
-                            <li class="active">Parents</li>
+                            <li>Parents</li>
+                            <li class="active">Edit Parents</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div> <!--row-->
-
+         <div class="inner-box">
         <div class="row margin-top-area">
             <div class="col-md-8 snt form-horizontal">
 {{--                {!! Form::open(array('url' => 'parent/add', 'files' => true)) !!}--}}
@@ -164,7 +165,9 @@
                     </div>
                 {!!  Form::close()   !!}
             </div>
+
         </div>
+        
     </div>
 
 

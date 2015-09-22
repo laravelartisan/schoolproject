@@ -37,7 +37,8 @@
 
 			<div class="row">
 				<div class="col-md-12">
-					<div class="col-md-6 col-md-offset-3">					<div class="form-inner">	
+					<div class="col-md-6 col-md-offset-3">
+						<div class="form-inner">	
 							<form>
 								<div class="form-group">
 									<label class="col-sm-2 control-label">

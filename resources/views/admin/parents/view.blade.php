@@ -11,11 +11,14 @@
     <div class="container-fluid" style="min-height: 1215px;">
         <div class="row">
             <div class="col-md-12">
-                <div class="student-box-header">
-                    <div class="col-md-6">
-                        <span class="glyphicon glyphicon-user " aria-hidden="true"></span>Parents
+                <div class="view-header">
+                    <div class="col-md-6">                     
+                        <button class="btn btn-warning"><span class="fa fa-print"></span> Print </button>
+                         <button class="btn btn-warning"><span class="fa fa-file"></span> PDF Preview </button>
+                         <button class="btn btn-warning"><span class="fa fa-file"></span> Edit</button>
+                         <button class="btn btn-warning"><span class="fa fa-file"></span> Send Pdf to Mail </button> 
                     </div>
-                    <div class="col-md-6 snt">
+                    <div class="col-md-6 view">
                         <ul class="breadcrumb text-right">
                             <li>
                                 <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
@@ -28,103 +31,74 @@
         </div> <!--row-->
 
         <div class="row margin-top-area">
-            <div class="col-md-8 snt form-horizontal">
-                {!! Form::open(array('url' => 'parent/add', 'files' => true)) !!}
+            <div class="col-md-12 view">
+               
+               <table class="table table-bordered table-hover table-responsive view-table-holder">
+                    <thead>
+                       <tr class="th-bg ">
+                           <th colspan="4" class="text-center"> 
+                               <div class="view-picture">
+                               <img src="{{ asset('bower_components/admin-lte/dist/img/Shohag.jpg') }}" class="img-circle" alt="User Image">
+                               </div>
+                            </th> 
+                        </tr>
+                         <tr class="th-bg">
+                           <th colspan="4" class="text-center">  
+                               <div class="view-name">{{ $userProfile->name }}</div> 
+                           </th> 
+                        </tr>
+                        <tr class="th-bg">
+                           <th colspan="4" class="text-center">{{ $userProfile->email }}</th> 
+                        </tr>
+                          
+                   </thead>
 
-                <div class="form-group ">
-                    <div class="col-sm-2">
+                   <tbody>
+                        <tr>
+                           <td colspan="4">
+                             <h3 class="nomargin"> Personal Information</h3>
+                           </td>                                                  
+                       </tr>
 
-                    </div>
-                    {{--<label for="inputName" class="col-sm-2 control-label">Name</label>--}}
-                    <div class="col-sm-10">
-                        {!! Form::hidden('type_id',3,['class'=>'form-control']) !!}
+                       <tr>
+                           <td>Father's Name </td>
+                           <td> {{ $userProfile->father_name }}</td>
+                           <td>Father's Profession </td>
+                           <td> {{ $userProfile->profession }}</td>
+                                                   
+                       </tr>
+                       <tr>
+                           <td> Mother's Name  </td>
+                           <td> {{ $userProfile->mother_name  }}</td>    
+                           <td> Mother's Profession</td>
+                           <td> {{ $userProfile->profession }}</td>                          
+                                                     
+                       </tr>
+                       <tr>
+                           <td> Phone </td>
+                           <td> {{ $userProfile->phone }}</td>    
+                           <td> Address</td>
+                           <td> {{ $userProfile->address }}</td>                         
+                                                     
+                       </tr>
+                       
 
-                    </div>
-                </div>
+                       <tr>                              
+                           <td> Username</td>
+                           <td colspan="3"> {{ $userProfile->username }}</td>                      
+                                                     
+                       </tr>
 
-                <div class="form-group">
-                    {!! Form::label('name','Name', ['class'=>'col-sm-2 control-label']) !!}
-
-                    <div class="col-sm-10">
-                        {{ $userProfile->name }}
-                    </div>
-
-                </div>
-                <div class="form-group">
-                    {!! Form::label('father_name','Father\'s name', ['class'=>'col-sm-2 control-label']) !!}
-
-                    <div class="col-sm-10">
-                        {{ $userProfile->father_name }}
-                    </div>
-
-                </div>
-                <div class="form-group ">
-                    {!! Form::label('mother_name','Mother\'s name', ['class'=>'col-sm-2 control-label']) !!}
-
-                    <div class="col-sm-10">
-                        {{ $userProfile->mother_name }}
-                    </div>
-
-                </div>
-
-                <div class="form-group ">
-                    {!! Form::label('profession','Profession', ['class'=>'col-sm-2 control-label']) !!}
-
-                    <div class="col-sm-10">
-                        {{ $userProfile->profession }}
-                    </div>
-
-                </div>
-
-                <div class="form-group ">
-                    {!! Form::label('gender','Gender', ['class'=>'col-sm-2 control-label']) !!}
-
-                    <div class="col-sm-10 ">
-
-                        {{ $userProfile->gender }}
-                    </div>
-
-                </div>
-                <div class="form-group ">
-                    {!! Form::label('email','Email', ['class'=>'col-sm-2 control-label']) !!}
-
-                    <div class="col-sm-10">
-                        {{ $userProfile->email }}
-                    </div>
-
-                </div>
-                <div class="form-group ">
-                    {!! Form::label('phone','Phone', ['class'=>'col-sm-2 control-label']) !!}
-
-                    <div class="col-sm-10">
-                        {{ $userProfile->phone }}
-                    </div>
-
-                </div>
-                <div class="form-group ">
-                    {!! Form::label('address','Address', ['class'=>'col-sm-2 control-label']) !!}
-
-                    <div class="col-sm-10">
-                        {{ $userProfile->address }}
-                    </div>
-
-                </div>
+                   </tbody>
+               </table>                 
 
 
+                
 
-                <div class="form-group ">
-                    {!! Form::label('username','Username', ['class'=>'col-sm-2 control-label']) !!}
-
-                    <div class="col-sm-10">
-                        {{ $userProfile->username }}
-                    </div>
-
-                </div>
-
-
-                {!!  Form::close()   !!}
             </div>
+            <div class="clearfix"></div>
         </div>
+
     </div>
 
 

@@ -64,11 +64,11 @@
 									<td>{{ $user->name }}</td>
 									<td>{{ $user->email }}</td>
 									<td>
-									<a class="btn btn-primary btn-xs mrg" href="{{ url('user/view',[$user->id,2]) }}">
+									<a class="btn btn-primary btn-xs mrg" data-original-title="View" data-toggle="tooltip" href="{{ url('user/view',[$user->id,2]) }}">
                                         <i class="fa fa-check-square-o"></i></a> 
-                                        <a class="btn btn-warning btn-xs mrg" href="{{ url('user/edit',[$user->id,2]) }}"><i class="fa fa-edit"></i></a>
+                                        <a class="btn btn-warning btn-xs mrg" data-original-title="Edit" data-toggle="tooltip" href="{{ url('user/edit',[$user->id,2]) }}"><i class="fa fa-edit"></i></a>
 
-                                        <a  class="btn btn-danger btn-xs mrg" href="{{ url('user/delete',[$user->id,2]) }}"><i class="fa fa-trash-o"></i></a>   </td>
+                                        <a  class="btn btn-danger btn-xs mrg" data-original-title="Delete" data-toggle="tooltip"href="{{ url('user/delete',[$user->id,2]) }}"><i class="fa fa-trash-o"></i></a>   </td>
 									
 								</tr>
 							@endforeach

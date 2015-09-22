@@ -1,4 +1,7 @@
 
+
+
+
 .margin-top-area{
     margin-top: 20px;
 }
@@ -71,6 +74,10 @@ ul.breadcrumb li.active{
 	background-color: #D9E0E7;
 	padding: 20px;
 	margin:20px 0;
+}
+
+.class-holder .form-group{
+    margin-bottom: 0;
 }
 .class-holder label{
 	/* width: 40%; */
@@ -179,13 +186,71 @@ ul.folder-item li a:hover{
     margin-bottom: 15px;
 }
 .form-inner .form-group {
-    margin-bottom: 15px;
+    //margin-bottom: 15px;
     width: 100%;
     float: left;
 }
+.form-inner .form-group .control-label {
+    margin-top: 8px;
+}
+
 .nopaddingleft{
     padding-left: 0;
 }
 .mail .nav-tabs{
     background-color: #ECF0F5;
+}
+
+
+/*---------view-------*/
+.view-header{
+    background-color: #f8f8f8;
+    border: 1px solid #e2e7eb;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 19px;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.view .breadcrumb{
+    list-style: none;
+    background-color:#f8f8f8;
+    border-radius: 4px;
+    float: right;
+    width: 50%;
+    margin-top: 8px;
+}
+.th-bg{
+    background-color: #374850 ;
+    color: #fff;
+}
+.view-table-holder{
+    background-color: #fff;
+}
+.view .table-bordered>thead>tr>th{
+    border-bottom-width: 1px !important;
+}
+.view .nomargin{
+    margin: 0;
+}
+.view-picture{
+    width:100%;
+}
+.view-picture .img-circle{
+    width: 120px;
+    height: 120px;
+    border:10px solid rgba(255, 255, 255, 0.3);
+}
+.view-name{
+    color: #fff;
+    font-style: italic;
+    font-size: 20px;
+}
+.email{
+    margin-top:5px;
+    color: #fff;
+    font-style: italic;
 }

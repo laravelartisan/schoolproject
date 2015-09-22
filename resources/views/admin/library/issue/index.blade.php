@@ -35,17 +35,17 @@
 	     		<div class="col-md-12">
 	     			<div class="col-md-6 col-md-offset-3">
 	     				<div class="class-holder">
-	     					<form>
-	     					    <label for="">Class</label>
-	     					 	<select id='classname' class="form-control">
-	     					 	 <option>Select Class</option>
-								  <option>One</option>
-								  <option>Two</option>
-								  <option>Three</option>
-								  <option>Four</option>
-								  <option>Five</option>
-								</select>
-	     					 </form>
+	     				 {!! Form::open(array('url' => 'user/add', 'files' => true)) !!}
+	     					<div class="form-group {{ $errors->has('library_id')? 'has-error':'' }}">
+                        	{!! Form::label('library_id','Library ID ', ['class'=>'col-sm-2 control-label']) !!}
+
+                            <div class="col-sm-10">
+                                {!! Form::search('library_id',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('library_id','<span class="help-block">:message</span>')   !!}
+                            </div>
+
+                        </div>
+		                     {!!  Form::close()   !!}
 	     				</div>
 	     			</div>
 	     		</div>

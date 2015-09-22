@@ -29,17 +29,23 @@
 
 	     		<div class="col-md-12">
 	     			<div class="col-md-6 col-md-offset-3">
-	     				<div class="class-holder">
+	     			<div class="form-inner">
 	     					<form>
-	     					    <label for="">Class</label>
-	     					 	<select id='classname' class="form-control">
-	     					 	 <option>Select Class</option>
-								  <option>One</option>
-								  <option>Two</option>
-								  <option>Three</option>
-								  <option>Four</option>
-								  <option>Five</option>
-								</select>
+	     					    <div class="form-group">
+									<label class="col-sm-2 control-label">
+											Class
+									</label>
+									<div class="col-sm-10">
+										<select class="form-control">		
+											<option>Select Class</option>
+											<option>One</option>
+											<option>Two</option>
+											<option>Three</option>
+											<option>Four</option>
+											<option>Five</option>
+										</select>
+									</div>
+								</div>
 	     					 </form>
 	     				</div>
 	     			</div>
