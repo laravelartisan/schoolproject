@@ -239,6 +239,14 @@ ul.folder-item li a:hover{
 .view-picture{
     width:100%;
 }
+
+.view-picture .fa-man {
+    font-size: 5em;
+    padding-top: 7px;
+}
+
+
+
 .view-picture .img-circle{
     width: 120px;
     height: 120px;

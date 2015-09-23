@@ -31,11 +31,9 @@
                         <td>{{ $student->section }}</td>
                         <td>{{ $student->roll }}</td>
                         <td>
-                            <a class="btn btn-primary btn-xs mrg" href="{{ url('user/view',[$student->id,1]) }}">
+                            <a class="btn btn-primary btn-xs mrg" href="{{ url('att/view',[$student->id,1]) }}">
                                 <i class="fa fa-check-square-o"></i></a>
-                            <a class="btn btn-warning btn-xs mrg" href="{{ url('user/edit',[$student->id,1]) }}"><i class="fa fa-edit"></i></a>
-
-                            <a  class="btn btn-danger btn-xs mrg" href="{{ url('user/delete',[$student->id,1]) }}"><i class="fa fa-trash-o"></i></a>
+                            
                         </td>
 
                     </tr>

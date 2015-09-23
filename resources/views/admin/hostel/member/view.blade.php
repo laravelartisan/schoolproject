@@ -23,7 +23,7 @@
                             <li>
                                 <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
                                 <a href="#">Dashboard</a></li>
-                            <li class="active">Student</li>
+                            <li class="active">Member</li>
                         </ul>
                     </div>
                 </div>
@@ -56,15 +56,15 @@
                    <tbody>
                         <tr>
                            <td colspan="4">
-                             <h3 class="nomargin">Personal Information</h3>
+                             <h3 class="nomargin"> Personal Information</h3>
                            </td>                                                  
                        </tr>
 
                        <tr>
-                           <td>Roll</td>
-                           <td> {{ $userProfile->roll }}</td>
-                           <td> Section</td>
-                           <td>  {{ $userProfile->section }}</td>
+                           <td>Father's Name </td>
+                           <td> {{ $userProfile->father_name }}</td>
+                           <td> Mother's Name</td>
+                           <td> {{ $userProfile->mother_name }}</td>
                                                    
                        </tr>
                        <tr>
@@ -77,68 +77,32 @@
                        <tr>
                            <td> Religion </td>
                            <td> {{ $userProfile->religion }}</td>    
-                           <td> Email</td>
-                           <td> {{ $userProfile->email }}</td>                         
+                           <td> Phone</td>
+                           <td> {{ $userProfile->phone }}</td>                         
                                                      
                        </tr>
                        <tr>
-                           <td> Phome </td>
-                           <td> {{ $userProfile->phone }}</td>    
-                           <td>Address</td>
-                           <td>  {{ $userProfile->address }}</td>                         
+                           <td> Address </td>
+                           <td> {{ $userProfile->address }}</td>    
+                           <td> Joining Date</td>
+                           <td>  {{ $userProfile->joining_date }}</td>                         
                                                      
                        </tr>
 
-                       <tr>                            
+                       <tr>
+                           <td> Type </td>
+                           <td>Accountant</td>    
                            <td> Username</td>
-                           <td colspan="3"> {{ $userProfile->username }}</td>                         
+                           <td>   {{ $userProfile->username }}</td>                         
                                                      
                        </tr>
-
-
-                       <tr>
-                           <td colspan="4">
-                             <h3 class="nomargin"> Parents Information</h3>
-                           </td>                                                  
-                       </tr>
-
-                       <tr>
-                           <td>Guardian</td>
-                           <td>Raihan Kabir</td>
-                           <td>Father's Name</td>
-                           <td>{{ $userProfile->father_name }}</td>
-                                                   
-                       </tr>
-                       <tr>
-                          <td> Mother's Name</td>
-                           <td> {{ $userProfile->mother_name }}</td>  
-                           <td> Father's Profession  </td>
-                           <td>business</td>                          
-                                                     
-                       </tr>
-                       <tr>
-                           <td> Mother's Profession  </td>
-                           <td>Teacher</td>    
-                           <td> Email</td>
-                           <td> {{ $userProfile->email }}</td>                         
-                                                     
-                       </tr>
-                       <tr>
-                           <td> Phome </td>
-                           <td> {{ $userProfile->phone }}</td>    
-                           <td>Address</td>
-                           <td>  {{ $userProfile->address }}</td>                         
-                                                     
-                       </tr>
-
-                       <tr>                            
-                           <td> Username</td>
-                           <td colspan="3"> {{ $userProfile->username }}</td>                         
-                                                     
-                       </tr>
+                       
 
                    </tbody>
-               </table>                 
+               </table> 
+
+
+                              
 
 
                 

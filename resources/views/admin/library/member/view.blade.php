@@ -23,7 +23,7 @@
                             <li>
                                 <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
                                 <a href="#">Dashboard</a></li>
-                            <li class="active">Student</li>
+                            <li class="active">Member</li>
                         </ul>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                        <tr class="th-bg ">
                            <th colspan="4" class="text-center"> 
                                <div class="view-picture">
-                               <span class="glyphicon glyphicon-user fa-man img-circle" aria-hidden="true"></span>
+                               <img src="{{ asset('bower_components/admin-lte/dist/img/Shohag.jpg') }}" class="img-circle" alt="User Image">
                                </div>
                             </th> 
                         </tr>
@@ -56,15 +56,15 @@
                    <tbody>
                         <tr>
                            <td colspan="4">
-                             <h3 class="nomargin">Personal Information</h3>
+                             <h3 class="nomargin"> Personal Information</h3>
                            </td>                                                  
                        </tr>
 
                        <tr>
-                           <td>Roll</td>
-                           <td> {{ $userProfile->roll }}</td>
-                           <td> Section</td>
-                           <td>  {{ $userProfile->section }}</td>
+                           <td>Father's Name </td>
+                           <td> {{ $userProfile->father_name }}</td>
+                           <td> Mother's Name</td>
+                           <td> {{ $userProfile->mother_name }}</td>
                                                    
                        </tr>
                        <tr>
@@ -77,68 +77,65 @@
                        <tr>
                            <td> Religion </td>
                            <td> {{ $userProfile->religion }}</td>    
-                           <td> Email</td>
-                           <td> {{ $userProfile->email }}</td>                         
+                           <td> Phone</td>
+                           <td> {{ $userProfile->phone }}</td>                         
                                                      
                        </tr>
                        <tr>
-                           <td> Phome </td>
-                           <td> {{ $userProfile->phone }}</td>    
-                           <td>Address</td>
-                           <td>  {{ $userProfile->address }}</td>                         
+                           <td> Address </td>
+                           <td> {{ $userProfile->address }}</td>    
+                           <td> Joining Date</td>
+                           <td>  {{ $userProfile->joining_date }}</td>                         
                                                      
                        </tr>
 
-                       <tr>                            
+                       <tr>
+                           <td> Type </td>
+                           <td>Accountant</td>    
                            <td> Username</td>
-                           <td colspan="3"> {{ $userProfile->username }}</td>                         
+                           <td>   {{ $userProfile->username }}</td>                         
                                                      
                        </tr>
-
-
-                       <tr>
-                           <td colspan="4">
-                             <h3 class="nomargin"> Parents Information</h3>
-                           </td>                                                  
-                       </tr>
-
-                       <tr>
-                           <td>Guardian</td>
-                           <td>Raihan Kabir</td>
-                           <td>Father's Name</td>
-                           <td>{{ $userProfile->father_name }}</td>
-                                                   
-                       </tr>
-                       <tr>
-                          <td> Mother's Name</td>
-                           <td> {{ $userProfile->mother_name }}</td>  
-                           <td> Father's Profession  </td>
-                           <td>business</td>                          
-                                                     
-                       </tr>
-                       <tr>
-                           <td> Mother's Profession  </td>
-                           <td>Teacher</td>    
-                           <td> Email</td>
-                           <td> {{ $userProfile->email }}</td>                         
-                                                     
-                       </tr>
-                       <tr>
-                           <td> Phome </td>
-                           <td> {{ $userProfile->phone }}</td>    
-                           <td>Address</td>
-                           <td>  {{ $userProfile->address }}</td>                         
-                                                     
-                       </tr>
-
-                       <tr>                            
-                           <td> Username</td>
-                           <td colspan="3"> {{ $userProfile->username }}</td>                         
-                                                     
-                       </tr>
+                       
 
                    </tbody>
-               </table>                 
+               </table> 
+
+
+               <table class="table table-bordered table-hover table-responsive view-table-holder">
+                  <thead>
+                     <tr>
+                        <td colspan="32">
+                          <h3 class="nomargin"> Book Issue History</h3>
+                        </td>                                                  
+                      </tr>
+                      <tr>
+                        <th>#</th>
+                        <th>Book</th>
+                        <th>Author</th>
+                        <th>Serial No</th>
+                        <th>Issue Date</th>
+                        <th>Due Date</th>
+                        <th>Return Date</th>
+                        <th>Fine</th>
+                    </tr>
+                      </thead>
+                      <tbody>
+                         <tr>
+                              <td data-title="#">1</td>
+                              <td data-title="Book">English for today</td>
+                              <td data-title="Author">Kauser Ahamed</td>
+                              <td data-title="Serial No">20101005</td>
+                              <td data-title="Issue Date">14 Aug 2015</td>
+                              <td data-title="Due Date">20 Aug 2015</td>
+                              <td data-title="Return Date"></td>
+                              <td data-title="Fine"></td>
+                          </tr>
+                  </tbody>
+              </table>  
+
+
+                              
 
 
                 

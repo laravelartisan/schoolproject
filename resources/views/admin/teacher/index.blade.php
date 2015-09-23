@@ -59,8 +59,8 @@
 							@foreach($usersWithPhotos as $photo => $user) {{--($i = 0; $i < 15; $i++)--}}
 								<tr>
 									<td>{{ $slno++ }}</td>
-									<td>{!!  Html::image('imagecache/table/'.$photo) !!}</td>
-									{{--<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>--}}
+									{{-- <td>{!!  Html::image('imagecache/table/'.$photo) !!}</td> --}}
+									<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>
 									<td>{{ $user->name }}</td>
 									<td>{{ $user->email }}</td>
 									<td>

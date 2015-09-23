@@ -36,7 +36,7 @@
 											Class
 									</label>
 									<div class="col-sm-10">
-										<select class="form-control">		
+										<select id="classname" class="form-control">		
 											<option>Select Class</option>
 											<option>One</option>
 											<option>Two</option>
@@ -85,7 +85,7 @@
 			$('#classname').change(function()
 			{
 				/* setting currently changed option value to option variable */
-				var option = $(this).find('option:selected').val();
+				var className = $(this).find('option:selected').val();
 				/* setting input box value to selected option value */
 
 				/*alert(option);*/
@@ -93,7 +93,7 @@
 
 
 				$.ajax({
-					url: host + '/student/table',
+					url: host + '/student/' + className,
 					type: "GET", // not POST, laravel won't allow it
 					success: function(data){
 						/*alert(data);*/

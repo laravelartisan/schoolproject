@@ -7,7 +7,7 @@
                 <img src="{{ asset('bower_components/admin-lte/dist/img/boxed-bg.jpg') }}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>N M Khan</p>
+                <p>Aslam Ali</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -58,7 +58,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('attendance/student') }}"><i class="fa fa-sticky-note"></i> Student Attendance</a></li>
-                    <li><a href="{{ url('attendance/teacher') }}"><i class="fa fa-sticky-note"></i> Teacher Attendance</a></li>
+                    <li><a href="{{ url('user/att',[2]) }}"><i class="fa fa-sticky-note"></i> Teacher Attendance</a></li>
                     <li><a href="{{ url('attendance/exam') }}"><i class="fa fa-sticky-note"></i> Exam Attendance</a></li>
 
                 </ul>

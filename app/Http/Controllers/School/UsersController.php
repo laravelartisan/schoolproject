@@ -46,6 +46,24 @@ class UsersController extends Controller
 
 
     }
+
+    function attTeacherIndex($typeId){
+
+                $usersWithPhotos = array();
+                $type = $this->type->find($typeId);
+                $users = $type->users;
+                foreach($users as $user){
+
+                    if( count($user->photos)>0)
+
+                        $usersWithPhotos[$user->photos->first()->path] = $user;
+                }
+
+        //        dd($this->type->find($typeId)->type_name);
+
+                return view('admin.attendance.'.$type->type_name.'.index', compact('usersWithPhotos'));
+
+    }
     function getStudentByClass($className){
 
         $studentsWithPhotos = [];
@@ -62,13 +80,31 @@ class UsersController extends Controller
 
     }
 
+    function getAttStudentByClass($className){
+
+
+        $studentsWithPhotos = [];
+        $studentsByClass = $this->model->whereClass($className)->get();
+        foreach(  $studentsByClass as $studentByClass){
+            if( count($studentByClass->photos)>0)
+
+            $studentsWithPhotos[$studentByClass->photos->first()->path] = $studentByClass;
+
+        }
+
+
+        return view('admin.attdatable',compact('studentsWithPhotos'));
+
+
+    }
+
     function view($userId,$typeId){
 
         $type = $this->type->find($typeId);
         $userProfile = $this->model->whereId($userId)
                                     ->whereTypeId($typeId)
                                     ->first();
-//dd($userProfile);
+        //dd($userProfile);
         if(!is_null($userProfile))
 
 
@@ -78,6 +114,22 @@ class UsersController extends Controller
 
 
     }
+    function  attView($userId,$typeId){
+        $type = $this->type->find($typeId);
+        $userProfile = $this->model->whereId($userId)
+                                    ->whereTypeId($typeId)
+                                    ->first();
+        //dd($userProfile);
+        if(!is_null($userProfile))
+
+
+
+        return view('admin.attendance.'.$type->type_name.'.view',compact('userProfile'));
+        abort(404);
+
+
+    }
+
     function edit($userId,$typeId){
 
         $type = $this->type->find($typeId);

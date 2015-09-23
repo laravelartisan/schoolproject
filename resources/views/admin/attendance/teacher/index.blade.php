@@ -11,97 +11,99 @@
 			<div class="col-md-12">
 				<div class="student-box-header">
 					<div class="col-md-6">
-						<span class="glyphicon glyphicon-user " aria-hidden="true"></span>Teacher Attendance
+						<span class="glyphicon glyphicon-user " aria-hidden="true"></span>Teachers
 					</div>
 					<div class="col-md-6 snt">
 						<ul class="breadcrumb text-right">
 							<li>
 								<span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
 								<a href="#">Dashboard</a></li>
-							<li class="active">Teacher Attendance</li>
+							<li class="active">Teachers Attendance</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div> <!--row-->
-        <div class="inner-box">
-			<div class="row bg-white">
-				<div class="col-md-12">
-					<div class="add-student">
-						<a class="admore" href="{{ url('attendance/teacher/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Teacher Attendance</a>
-					</div>
-				</div>
-			</div>
+      <div class="inner-box">
+		<div class="row bg-white">
+			<div class="col-md-12">
+				<div class="add-student">
+					<a class="admore" href="{{ url('teacher/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Teacher Attendance</a>
 
-
-
-				{{--@include('admin.datatable')--}}
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="box">
-						<div class="box-header">						
-						</div><!-- /.box-header -->
-						<div class="box-body">
-							<table id="example1" class="table table-bordered table-striped">
-								<thead>
-								<tr>
-									<th>#</th>
-									<th>Photo</th>
-									<th>Name</th>
-									<th>Email</th>
-									<th>Action</th>
-									
-								</tr>
-								</thead>
-								<tbody>
-
-								@for ($i = 0; $i < 15; $i++)
-									<tr>
-										<td>1</td>
-										<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>
-										<td>Rakibul Islam</td>
-										<td>rakib@gmail.com</td>
-										<td>
-										<a class="btn btn-primary btn-xs mrg" href="#">
-	                                        <i class="fa fa-check-square-o"></i></a> 
-	                                        </td>
-										
-									</tr>
-								@endfor
-
-
-
-
-								<tr>
-									<td>Other browsers</td>
-									<td>All others</td>
-									<td>-</td>
-									<td>-</td>
-									<td>-</td>
-									
-								</tr>
-								</tbody>
-								<tfoot>
-								<tr>
-									<th>Rendering engine</th>
-									<th>Browser</th>
-									<th>Platform(s)</th>
-									<th>Engine version</th>
-									<th>CSS grade</th>
-									
-								</tr>
-								</tfoot>
-							</table>
-						</div><!-- /.box-body -->
-					</div><!-- /.box -->
-				</div>
 				</div>
 			</div>
 		</div>
+
+
+
+		{{--@include('admin.datatable')--}}
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="box">
+					<div class="box-header">						
+					</div><!-- /.box-header -->
+					<div class="box-body">
+						<table id="example1" class="table table-bordered table-striped">
+							<thead>
+							<tr>
+								<th>#</th>
+								<th>Photo</th>
+								<th>Name</th>
+								<th>Email</th>
+								<th>Action</th>
+								
+							</tr>
+							</thead>
+							<tbody>
+								{{ $slno = 1 }}
+							@foreach($usersWithPhotos as $photo => $user) {{--($i = 0; $i < 15; $i++)--}}
+								<tr>
+									<td>{{ $slno++ }}</td>
+									{{-- <td>{!!  Html::image('imagecache/table/'.$photo) !!}</td> --}}
+									<td><span class="glyphicon glyphicon-user fa-man" aria-hidden="true"></span></td>
+									<td>{{ $user->name }}</td>
+									<td>{{ $user->email }}</td>
+									<td>
+									<a class="btn btn-primary btn-xs mrg" data-original-title="View" data-toggle="tooltip" href="{{ url('att/view',[$user->id,2]) }}">
+                                        <i class="fa fa-check-square-o"></i></a> 
+                                    </td>
+									
+								</tr>
+							@endforeach
+
+
+
+
+							<tr>
+								<td>Other browsers</td>
+								<td>All others</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								
+							</tr>
+							</tbody>
+							<tfoot>
+							<tr>
+								<th>Rendering engine</th>
+								<th>Browser</th>
+								<th>Platform(s)</th>
+								<th>Engine version</th>
+								<th>CSS grade</th>
+								
+							</tr>
+							</tfoot>
+						</table>
+					</div><!-- /.box-body -->
+				</div><!-- /.box -->
+			</div>
+		</div> <!--row last-->
 	</div>
+   </div>
+</div>
 
 
- @endsection
+@endsection
 
 @section('datascript')
 	<script src="{{ asset('bower_components/admin-lte/plugins/datatables/jquery.dataTables.min.js') }}"></script>

@@ -38,7 +38,7 @@
                        <tr class="th-bg ">
                            <th colspan="4" class="text-center"> 
                                <div class="view-picture">
-                               <img src="{{ asset('bower_components/admin-lte/dist/img/Shohag.jpg') }}" class="img-circle" alt="User Image">
+                               <span class="glyphicon glyphicon-user fa-man img-circle" aria-hidden="true"></span>
                                </div>
                             </th> 
                         </tr>
