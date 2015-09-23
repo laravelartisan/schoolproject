@@ -37,11 +37,14 @@
 	     				<div class="class-holder">
 	     				 {!! Form::open(array('url' => 'user/add', 'files' => true)) !!}
 	     					<div class="form-group {{ $errors->has('library_id')? 'has-error':'' }}">
-                        	{!! Form::label('library_id','Library ID ', ['class'=>'col-sm-2 control-label']) !!}
+                        	{!! Form::label('library_id','Library ID ', ['class'=>'col-sm-3 control-label']) !!}
 
-                            <div class="col-sm-10">
-                                {!! Form::search('library_id',null,['class'=>'form-control']) !!}
+                            <div class="col-sm-7">
+                                {!! Form::text('library_id',null,['class'=>'form-control']) !!}
                                 {!!  $errors->first('library_id','<span class="help-block">:message</span>')   !!}
+                            </div>
+                            <div class="col-sm-2">
+                               {!! Form::submit('Submit',['class'=>'btn btn-primary','readonly'=>'readonly']) !!} 
                             </div>
 
                         </div>

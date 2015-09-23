@@ -26,8 +26,8 @@
                 </div>
             </div>
         </div> <!--row-->
-
-     	<div class="row margin-top-area">     		    
+        <div class="inner-box">
+     	  <div class="row margin-top-area">     		    
      		<div class="col-md-8 snt form-horizontal">
                 {{--<form class="form-horizontal">--}}
                     {!! Form::open(array('url' => 'teacher/add', 'files' => true)) !!}
@@ -187,7 +187,8 @@
                     </div>
                 {!!  Form::close()   !!}
      		</div>
-     	</div>
+     	  </div>
+        </div>
     </div>
 
 

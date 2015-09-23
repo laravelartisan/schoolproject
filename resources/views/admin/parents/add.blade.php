@@ -26,52 +26,52 @@
                 </div>
             </div>
         </div> <!--row-->
+        <div class="inner-box">
+            <div class="row margin-top-area">
+                <div class="col-md-8 snt form-horizontal">
+                    {!! Form::open(array('url' => 'parent/add', 'files' => true)) !!}
 
-        <div class="row margin-top-area">
-            <div class="col-md-8 snt form-horizontal">
-                {!! Form::open(array('url' => 'parent/add', 'files' => true)) !!}
+                    <div class="form-group ">
+                        <div class="col-sm-2">
 
-                <div class="form-group ">
-                    <div class="col-sm-2">
+                        </div>
+                        {{--<label for="inputName" class="col-sm-2 control-label">Name</label>--}}
+                        <div class="col-sm-10">
+                            {!! Form::hidden('type_id',3,['class'=>'form-control']) !!}
 
-                    </div>
-                    {{--<label for="inputName" class="col-sm-2 control-label">Name</label>--}}
-                    <div class="col-sm-10">
-                        {!! Form::hidden('type_id',3,['class'=>'form-control']) !!}
-
-                    </div>
-                </div>
-
-                <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
-                    {!! Form::label('name','Name', ['class'=>'col-sm-2 control-label']) !!}
-
-                    <div class="col-sm-10">
-                        {!! Form::text('name',null,['class'=>'form-control']) !!}
-                        {!!  $errors->first('name','<span class="help-block">:message</span>')   !!}
+                        </div>
                     </div>
 
-                </div>
-                <div class="form-group {{ $errors->has('father_name')? 'has-error':'' }}">
-                    {!! Form::label('father_name','Father\'s name', ['class'=>'col-sm-2 control-label']) !!}
+                    <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
+                        {!! Form::label('name','Name', ['class'=>'col-sm-2 control-label']) !!}
 
-                    <div class="col-sm-10">
-                        {!! Form::text('father_name',null,['class'=>'form-control']) !!}
-                        {!!  $errors->first('father_name','<span class="help-block">:message</span>')   !!}
+                        <div class="col-sm-10">
+                            {!! Form::text('name',null,['class'=>'form-control']) !!}
+                            {!!  $errors->first('name','<span class="help-block">:message</span>')   !!}
+                        </div>
+
+                    </div>
+                    <div class="form-group {{ $errors->has('father_name')? 'has-error':'' }}">
+                        {!! Form::label('father_name','Father\'s name', ['class'=>'col-sm-2 control-label']) !!}
+
+                        <div class="col-sm-10">
+                            {!! Form::text('father_name',null,['class'=>'form-control']) !!}
+                            {!!  $errors->first('father_name','<span class="help-block">:message</span>')   !!}
+                        </div>
+
+                    </div>
+                    <div class="form-group {{ $errors->has('mother_name')? 'has-error':'' }}">
+                        {!! Form::label('mother_name','Mother\'s name', ['class'=>'col-sm-2 control-label']) !!}
+
+                        <div class="col-sm-10">
+                            {!! Form::text('mother_name',null,['class'=>'form-control']) !!}
+                            {!!  $errors->first('mother_name','<span class="help-block">:message</span>')   !!}
+                        </div>
+
                     </div>
 
-                </div>
-                <div class="form-group {{ $errors->has('mother_name')? 'has-error':'' }}">
-                    {!! Form::label('mother_name','Mother\'s name', ['class'=>'col-sm-2 control-label']) !!}
-
-                    <div class="col-sm-10">
-                        {!! Form::text('mother_name',null,['class'=>'form-control']) !!}
-                        {!!  $errors->first('mother_name','<span class="help-block">:message</span>')   !!}
-                    </div>
-
-                </div>
-
-                <div class="form-group {{ $errors->has('profession')? 'has-error':'' }}">
-                    {!! Form::label('profession','Profession', ['class'=>'col-sm-2 control-label']) !!}
+                    <div class="form-group {{ $errors->has('profession')? 'has-error':'' }}">
+                        {!! Form::label('profession','Profession', ['class'=>'col-sm-2 control-label']) !!}
 
                     <div class="col-sm-10">
                         {!! Form::text('profession',null,['class'=>'form-control']) !!}
@@ -164,6 +164,7 @@
                     </div>
                 {!!  Form::close()   !!}
             </div>
+        </div>
         </div>
     </div>
 
