@@ -50,7 +50,7 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->belongsTo('SchoolSoft\School\Type');
     }
-    public function setBirthDateAttribute($value)
+    /*public function setBirthDateAttribute($value)
     {
         $this->attributes['birth_date'] = Carbon::createFromFormat('d/m/Y',$value);
     }
@@ -58,7 +58,7 @@ class User extends Model implements AuthenticatableContract,
     public function setJoiningDateAttribute($value)
     {
         $this->attributes['joining_date'] = Carbon::createFromFormat('d/m/Y',$value);
-    }
+    }*/
     protected $hidden = ['password', 'remember_token'];
 
 

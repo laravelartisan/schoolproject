@@ -529,7 +529,7 @@ Route::get('admin2', function(){
 Route::post('user/add','School\UsersController@store');
 Route::post('teacher/add', 'School\UsersController@store');
 Route::get('user/{typeId}', ['as'=>'userlist','uses'=>'School\UsersController@index']);
-Route::get('user/att/{typeId}', ['as'=>'userlist','uses'=>'School\UsersController@attTeacherIndex']);
+Route::get('user/att/{typeId}', 'School\UsersController@attTeacherIndex');
 Route::get('user/view/{userId}/{typeId}', 'School\UsersController@view');
 Route::get('user/edit/{userId}/{typeId}', 'School\UsersController@edit');
 Route::put('user/edit/{userId}/{typeId}', 'School\UsersController@update');
@@ -540,9 +540,7 @@ Route::get('att/view/{userId}/{typeId}','School\UsersController@attView');
 Route::post('parent/add', 'School\UsersController@store');
 Route::post('student/add', 'School\UsersController@store');
 
-Route::get('view',function(){
-    return view('admin.dumyview');
-});
+
 
 
 
