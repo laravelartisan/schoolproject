@@ -2,9 +2,9 @@
     <!-- Logo -->
     <a href="http://localhost:8000/" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>SMS</span>
+        {{-- <span class="logo-mini"><b>A</b>SMS</span> --}}
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Admin</b>&nbsp;SMS</span>
+        {{-- <span class="logo-lg"><b>Admin</b>&nbsp;SMS</span> --}}
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top" role="navigation">
@@ -205,14 +205,14 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="{{ asset('bower_components/admin-lte/dist/img/boxed-bg.jpg') }}" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Aslam Ali</span>
+                        <span class="hidden-xs">Edu360</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
                             <img src="dist/img/boxed-bg.jpg" class="img-circle" alt="User Image">
                             <p>
-                                Aslam Ali - Web Developer
+                                Edu360 - Web Developer
                                 <small>Member since Nov. 2012</small>
                             </p>
                         </li>

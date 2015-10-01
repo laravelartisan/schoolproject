@@ -29,21 +29,28 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="col-md-6 col-md-offset-3">
-						<div class="form-inner">	
-							<form>
-								<div class="form-group">
-		                            <label for="inputName" class="col-sm-2 control-label">Date</label>
-		                            <div class="col-sm-10">
-		                                <input type="text" class="form-control" id="#" >
-		                            </div>
-		                        </div>
-								
+						<div class="form-inner form-horizontal">	
+							 {!! Form::open(array('url' => 'attendance/teacher/add', 'files' => true)) !!}
+								<div class="form-group {{ $errors->has('date')? 'has-error':'' }}">
+		                        {!! Form::label('date','Date', ['class'=>'col-sm-2 text-right']) !!}
+		                        {{--<label for="inputName" class="col-sm-2 control-label">Date of Birth</label>--}}
+			                        <div class="col-sm-10">
+			                            <div class='input-group date' id='datetimepicker'>
+			                                {!! Form::input('date','date',date('d/m/Y'),['class'=>'form-control']) !!}
+
+			                                <span class="input-group-addon">
+			                                    <span class="glyphicon glyphicon-calendar"></span>
+			                                </span>
+			                                {!!  $errors->first('date','<span class="help-block">:message</span>')   !!}
+			                            </div>
+			                        </div>
+			                    </div>
 								<div class="form-group">
 									<div class="col-sm-12 text-right">
-										<input class="btn btn-primary" type="submit" value="View Attendance">
+										 {!! Form::submit('View Attendance',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
 									</div>
 								</div>
-							</form>	
+							 {!!  Form::close()   !!}
 						</div>
 					</div>
 				</div>

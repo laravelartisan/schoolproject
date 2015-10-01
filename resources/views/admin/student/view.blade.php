@@ -12,13 +12,14 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="view-header">
-                    <div class="col-md-6">                     
+                    <div class="col-md-7">                     
                         <button class="btn btn-warning"><span class="fa fa-print"></span> Print </button>
+                        <button class="btn btn-warning"><span class="fa fa-print"></span> Print Preview </button>
                          <button class="btn btn-warning"><span class="fa fa-file"></span> PDF Preview </button>
                          <button class="btn btn-warning"><span class="fa fa-file"></span> Edit</button>
-                         <button class="btn btn-warning"><span class="fa fa-file"></span> Send Pdf to Mail </button> 
+                         <button class="btn btn-warning"><span class="fa fa-file"></span> Send Mail as PDF</button> 
                     </div>
-                    <div class="col-md-6 view">
+                    <div class="col-md-5 view">
                         <ul class="breadcrumb text-right">
                             <li>
                                 <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>

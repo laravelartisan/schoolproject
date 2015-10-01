@@ -28,7 +28,7 @@
 		<div class="row bg-white">
 			<div class="col-md-12">
 				<div class="add-student">
-					<a class="admore" href="{{ url('teacher/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Teacher Attendance</a>
+					<a class="admore" href="{{ url('attendance/teacher/add') }}"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Teacher Attendance</a>
 
 				</div>
 			</div>

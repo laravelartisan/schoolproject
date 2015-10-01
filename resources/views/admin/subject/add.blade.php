@@ -28,59 +28,65 @@
         </div> <!--row-->
         <div class="inner-box">
          	<div class="row margin-top-area">     		    
-         		<div class="col-md-8 snt">     			   			
-                    <form class="form-horizontal"> 
-                    <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Class Name</label>
-                            <div class="col-sm-10">
-                               <select class="form-control">
-                                  <option>One</option>
-                                  <option>Two</option>
-                                  <option>Three</option>
-                                  <option>Four</option>
-                                  <option>Five</option>
-                                  <option>Six</option>
-                                </select>   
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Teacher Name</label>
-                            <div class="col-sm-10">
-                                <select class="form-control">
-                                    <option>One</option>
-                                    <option>Two</option>
-                                    <option>Three</option>
-                                    <option>Four</option>
-                                    <option>Five</option>
-                                    <option>Six</option>
-                                </select>
-                            </div>
-                        </div>                  
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Subject Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#" placeholder="Name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Subject Author</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#">
-                            </div>
-                        </div>                     
+         		<div class="col-md-8 snt form-horizontal">     			   			
+                    {!! Form::open(array('url' => 'subject/add', 'files' => true)) !!}
+                   
+                       
+                        <div class="form-group {{ $errors->has('class')? 'has-error':'' }}">
+                            {!! Form::label('class','Class Name', ['class'=>'col-sm-2 control-label']) !!}                                     
 
+                            <div class="col-sm-10 ">
 
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Subject Code</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#">
+                                {!! Form::select('class', array( 'One'=>'One',  'Two'=>'Two'), null, ['class'=>'form-control']) !!}
+                                {!!  $errors->first('class','<span class="help-block">:message</span>')   !!}
                             </div>
+
+                        </div>
+
+                        <div class="form-group {{ $errors->has('teacher_name')? 'has-error':'' }}">
+                            {!! Form::label('teacher_name','Teacher Name', ['class'=>'col-sm-2 control-label']) !!}                                     
+
+                            <div class="col-sm-10 ">
+                                {!! Form::select('teacher_name', array( 'Raihan'=>'Raihan',  'Monir'=>'Monir'), null, ['class'=>'form-control']) !!}
+                                {!!  $errors->first('teacher_name','<span class="help-block">:message</span>')   !!}
+                            </div>
+
+                        </div>
+                  
+                        <div class="form-group {{ $errors->has('subject_name')? 'has-error':'' }}">
+                            {!! Form::label('subject_name','Subject Name', ['class'=>'col-sm-2 control-label']) !!}
+
+                            <div class="col-sm-10">
+                                {!! Form::text('subject_name',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('subject_name','<span class="help-block">:message</span>')   !!}
+                            </div>
+
+                        </div>
+                        <div class="form-group {{ $errors->has('author')? 'has-error':'' }}">
+                            {!! Form::label('author','Subject Author ', ['class'=>'col-sm-2 control-label']) !!}
+
+                            <div class="col-sm-10">
+                                {!! Form::text('author',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('author','<span class="help-block">:message</span>')   !!}
+                            </div>
+
+                        </div>
+
+                        <div class="form-group {{ $errors->has('subject_code')? 'has-error':'' }}">
+                            {!! Form::label('subject_code','Subject Code', ['class'=>'col-sm-2 control-label']) !!}
+
+                            <div class="col-sm-10">
+                                {!! Form::text('subject_code',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('subject_code','<span class="help-block">:message</span>')   !!}
+                            </div>
+
                         </div>
 
                         <div class="text-right">
-                            <button type="submit" class="btn btn-default">Submit</button>
+                             {!! Form::submit('Submit',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
+
                         </div>                  
-                    </form>     		               
+                     {!!  Form::close()   !!}       		               
          		</div>
          	</div>
         </div>

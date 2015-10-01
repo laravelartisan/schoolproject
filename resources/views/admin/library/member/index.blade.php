@@ -29,24 +29,29 @@
 
 	     		<div class="col-md-12">
 	     			<div class="col-md-6 col-md-offset-3">
-	     			<div class="form-inner">
-	     					<form>
-	     					    <div class="form-group">
-									<label class="col-sm-2 control-label">
-											Class
-									</label>
-									<div class="col-sm-10">
-										<select id="classname" class="form-control">		
-											<option>Select Class</option>
-											<option>One</option>
-											<option>Two</option>
-											<option>Three</option>
-											<option>Four</option>
-											<option>Five</option>
-										</select>
+	     				<div class="form-inner form-horizontal">
+	     						
+							 {!! Form::open(array('url' => 'library/member/index', 'files' => true)) !!}
+
+
+								
+								<div class="form-group {{ $errors->has('class')? 'has-error':'' }}">
+		                            {!! Form::label('class','Class', ['class'=>'col-sm-2 text-right']) !!}                                     
+
+		                            <div class="col-sm-10 ">
+
+		                                {!! Form::select('class', array( 'One'=>'One',  'Two'=>'Two'), null, ['class'=>'form-control','id'=>'classname']) !!}
+		                                {!!  $errors->first('class','<span class="help-block">:message</span>')   !!}
+		                            </div>
+
+	                        	</div>
+	                        	<div class="form-group">
+									<div class="col-sm-12 text-right">
+										 {!! Form::submit('View Attendance',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
 									</div>
 								</div>
-	     					 </form>
+							 {!!  Form::close()   !!}
+						
 	     				</div>
 	     			</div>
 	     		</div>

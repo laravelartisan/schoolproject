@@ -28,54 +28,74 @@
         </div> <!--row-->
         <div class="inner-box">
          	<div class="row margin-top-area">     		    
-         		<div class="col-md-8 snt">     			   			
-                    <form class="form-horizontal">                   
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Name</label>
+         		<div class="col-md-8 snt form-horizontal">
+                    {!! Form::open(array('url' => 'library/book/add', 'files' => true)) !!}
+                           
+
+                            
+                            <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
+                        {!! Form::label('name','Name  ', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#" >
+                                {!! Form::text('name',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('name','<span class="help-block">:message</span>')   !!}
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Author</label>
+
+                        </div> 
+
+                        <div class="form-group {{ $errors->has('authore')? 'has-error':'' }}">
+                        {!! Form::label('authore','Authore  ', ['class'=>'col-sm-2 control-label']) !!}
+
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#">
+                                {!! Form::text('authore',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('authore','<span class="help-block">:message</span>')   !!}
+                            </div>
+
+                        </div> 
+
+                        <div class="form-group {{ $errors->has('subject_code')? 'has-error':'' }}">
+                        {!! Form::label('subject_code','Subject Code  ', ['class'=>'col-sm-2 control-label']) !!}
+
+                            <div class="col-sm-10">
+                                {!! Form::text('subject_code',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('subject_code','<span class="help-block">:message</span>')   !!}
+                            </div>
+                        </div> 
+
+                        <div class="form-group {{ $errors->has('price')? 'has-error':'' }}">
+                        {!! Form::label('price','Price  ', ['class'=>'col-sm-2 control-label']) !!}
+
+                            <div class="col-sm-10">
+                                {!! Form::text('price',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('price','<span class="help-block">:message</span>')   !!}
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Subject Code</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#">
-                            </div>
-                        </div>
+                        <div class="form-group {{ $errors->has('qualtity')? 'has-error':'' }}">
+                        {!! Form::label('qualtity','Qualtity  ', ['class'=>'col-sm-2 control-label']) !!}
 
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Price</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#">
+                                {!! Form::text('qualtity',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('qualtity','<span class="help-block">:message</span>')   !!}
                             </div>
-                        </div>
+                        </div>  
 
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Quantity</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#">
-                            </div>
-                        </div>
+                         <div class="form-group {{ $errors->has('rack_no')? 'has-error':'' }}">
+                        {!! Form::label('rack_no','Rack No  ', ['class'=>'col-sm-2 control-label']) !!}
 
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Rack No</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="#">
+                                {!! Form::text('rack_no',null,['class'=>'form-control']) !!}
+                                {!!  $errors->first('rack_no','<span class="help-block">:message</span>')   !!}
                             </div>
-                        </div>
-                                           
+                        </div>  
+
+
                         <div class="text-right">
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </div>                  
-                    </form>     		               
-         		</div>
+                             {!! Form::submit('Add Book',['class'=>'btn btn-success','readonly'=>'readonly']) !!}
+                               
+                            </div>
+                        {!!  Form::close()   !!}
+                </div>
          	</div>
         </div>
     </div>

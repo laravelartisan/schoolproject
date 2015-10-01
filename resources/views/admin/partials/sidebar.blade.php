@@ -7,7 +7,7 @@
                 <img src="{{ asset('bower_components/admin-lte/dist/img/boxed-bg.jpg') }}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Aslam Ali</p>
+                <p>Edu360</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -25,19 +25,19 @@
         <ul class="sidebar-menu">
             <li class="header">Dashboard</li>
 
-            <li class="active"><a href="{{ url('admin') }}"><i class="fa fa-laptop text-red"></i><span>Dashboard</span></a></li>
-            <li class="active"><a href="{{ url('user',[1]) }}"><i class="fa fa-mortar-board text-red"></i><span>Student</span></a></li>
-            <li class="active"><a href="{{ url('user',[3]) }}"><i class="fa fa-user text-red"></i><span>Parents</span></a></li>
-            <li class="active"><a href="{{ url('user',[2]) }}"><i class="fa fa fa-user text-red"></i><span>Teacher</span></a></li>
-            <li class="active"><a href="{{ url('user',[4]) }}"><i class="fa fa-users text-red"></i><span>User</span></a></li>
-            <li class="active"><a href="{{ url('class') }}"><i class="fa fa-sitemap text-red"></i><span>Class</span></a></li>
-            <li class="active"><a href="{{ url('section') }}"><i class="fa fa-star text-red"></i><span>Section</span></a></li>
-            <li class="active"><a href="{{ url('subject') }}"><i class="fa fa-book text-red"></i><span>Subject</span></a></li>
-            <li class="active"><a href="{{ url('grade') }}"><i class="fa fa-signal text-red"></i><span>Grade</span></a></li>
+            <li class="active"><a href="{{ url('admin') }}"><i class="fa fa-laptop"></i><span>Dashboard</span></a></li>
+            <li class="active"><a href="{{ url('user',[1]) }}"><i class="fa fa-mortar-board"></i><span>Student</span></a></li>
+            <li class="active"><a href="{{ url('user',[3]) }}"><i class="fa fa-user"></i><span>Parents</span></a></li>
+            <li class="active"><a href="{{ url('user',[2]) }}"><i class="fa fa fa-user"></i><span>Teacher</span></a></li>
+            <li class="active"><a href="{{ url('user',[4]) }}"><i class="fa fa-users"></i><span>User</span></a></li>
+            <li class="active"><a href="{{ url('class') }}"><i class="fa fa-sitemap"></i><span>Class</span></a></li>
+            <li class="active"><a href="{{ url('section') }}"><i class="fa fa-star "></i><span>Section</span></a></li>
+            <li class="active"><a href="{{ url('subject') }}"><i class="fa fa-book "></i><span>Subject</span></a></li>
+            <li class="active"><a href="{{ url('grade') }}"><i class="fa fa-signal "></i><span>Grade</span></a></li>
 
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-file-text text-red"></i>
+                    <i class="fa fa-file-text"></i>
                     <span>Exam</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
@@ -48,11 +48,11 @@
                      <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>--}}
                 </ul>
             </li>
-            <li class="active"><a href="{{ url('mark') }}"><i class="fa fa-flask text-red"></i><span>Mark</span></a></li>
-            <li class="active"><a href="{{ url('routine') }}"><i class="fa fa-list-alt text-red"></i><span>Routine</span></a></li>
+            <li class="active"><a href="{{ url('mark') }}"><i class="fa fa-flask"></i><span>Mark</span></a></li>
+            <li class="active"><a href="{{ url('routine') }}"><i class="fa fa-list-alt"></i><span>Routine</span></a></li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-file-text text-red"></i>
+                    <i class="fa fa-file-text"></i>
                     <span>Attendance</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
@@ -65,7 +65,7 @@
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-book text-red"></i> <span>Library</span>
+                    <i class="fa fa-book"></i> <span>Library</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
@@ -77,7 +77,7 @@
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-bus text-red"></i> <span>Transport</span>
+                    <i class="fa fa-bus"></i> <span>Transport</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
@@ -88,7 +88,7 @@
 
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-hotel text-red"></i> <span>Hostel</span>
+                    <i class="fa fa-hotel"></i> <span>Hostel</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
@@ -104,7 +104,7 @@
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-file-excel-o text-red"></i> <span>Account</span>
+                    <i class="fa fa-file-excel-o"></i> <span>Account</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
@@ -116,13 +116,13 @@
                     <li><a href="{{ url('account/settings') }}"><i class="fa fa-key"></i> Payment Settings</a></li>
                 </ul>
             </li>
-            <li><a href="{{ url('promotion') }}"><i class="fa fa-level-up text-red"></i> <span>Promotion</span></a></li>
+            <li><a href="{{ url('promotion') }}"><i class="fa fa-level-up"></i> <span>Promotion</span></a></li>
 
-            <li><a href="{{ url('media') }}"><i class="fa fa-film text-red"></i> <span>Media</span></a></li>
+            <li><a href="{{ url('media') }}"><i class="fa fa-film"></i> <span>Media</span></a></li>
 
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-mail-forward text-red"></i> <span>Mail/SMS</span>
+                    <i class="fa fa-mail-forward"></i> <span>Mail/SMS</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
@@ -135,10 +135,10 @@
             </li>
 
 
-            <li><a href="{{ url('message') }}"><i class="fa fa-envelope text-red"></i> <span>Message</span></a></li>
-            <li><a href="{{ url('notice') }}"><i class="fa fa-calendar text-red"></i> <span>Notice</span></a></li>
-            <li><a href="{{ url('report') }}"><i class="fa fa-clipboard text-red"></i> <span>Report</span></a></li>
-            <li><a href="{{ url('settings') }}"><i class="fa fa-gears text-red"></i> <span>Settings</span></a></li>
+            <li><a href="{{ url('message') }}"><i class="fa fa-envelope"></i> <span>Message</span></a></li>
+            <li><a href="{{ url('notice') }}"><i class="fa fa-calendar"></i> <span>Notice</span></a></li>
+            <li><a href="{{ url('report') }}"><i class="fa fa-clipboard"></i> <span>Report</span></a></li>
+            <li><a href="{{ url('settings') }}"><i class="fa fa-gears"></i> <span>Settings</span></a></li>
         </ul>
     </section>
     <!-- /.sidebar -->

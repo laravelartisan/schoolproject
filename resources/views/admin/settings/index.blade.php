@@ -109,7 +109,7 @@
                         <div class="form-group">
                             <label class="col-sm-2"></label>
                             <div class="col-sm-10 text-left">
-                             {!! Form::submit('Update Setting',['class'=>'btn btn-defualt','readonly'=>'readonly']) !!}
+                             {!! Form::submit('Update Setting',['class'=>'btn btn-primary','readonly'=>'readonly']) !!}
                                
                             </div>
                         </div>                   
